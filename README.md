@@ -10,19 +10,19 @@ This repository aims to streamline the setup process for Ubuntu users in the fie
 #### Supported Tools
 Currently, the repository supports the installation and configuration of various tools including but not limited to:
 
-#### Development tools
-default tools setup for easier installation and running of the packages below.
+System Development tools
+Default tools setup for easier installation and running of the packages below.
+- [x] Autodesk Maya
+- [ ] Blender - not implemented yet
+- [ ] Unity - not implemented yet
+- [ ] Unreal Engine - not implemented yet
+- [ ] Foundry Nuke - not implemented yet
+- [ ] Houdini - not implemented yet
+- [ ] And many more will be supported
 
-Support for more will be added, this is a work in progress. Some of the products and scripts i will be adding will include setups for:
+Support for more will be added, this is a work in progress.
+
 Note: Not all scripts install, some are simply to help production workflows and to make things easier for the creator.
-
-- Autodesk Maya
-- Blender
-- Unity
-- Unreal Engine
-- Foundry Nuke
-- Houdini
-- And many more to come!
 
 The general concept is this. Im tired of being locked down to a single subset of Operating Systems that are "officially supported" 
 
