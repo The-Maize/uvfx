@@ -16,13 +16,13 @@ default tools setup for easier installation and running of the packages below.
 Support for more will be added, this is a work in progress. Some of the products and scripts i will be adding will include setups for:
 Note: Not all scripts install, some are simply to help production workflows and to make things easier for the creator.
 
-Autodesk Maya
-Blender
-Unity
-Unreal Engine
-Foundry Nuke
-Houdini
-And many more to come!
+- Autodesk Maya
+- Blender
+- Unity
+- Unreal Engine
+- Foundry Nuke
+- Houdini
+- And many more to come!
 
 The general concept is this. Im tired of being locked down to a single subset of Operating Systems that are "officially supported" 
 
