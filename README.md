@@ -71,7 +71,7 @@ This repository is licensed under the GPL License, which means you are free to u
 Will contain the license file as well as the script in the licenses folder if there is any changes.)
 
 #### How to contact me: - I can be found in the following place I frequent:
-Maize on Discord: https://discord.gg/7GwPhzsXgv
-Maize on Mastodon: https://mastodon.social/invite/D4oj9QhT or if you are already a member @theMaize
-Maize on Youtube: @theMaizeOfficial
-Maize on Twitter: @theMaize
+- Maize on Discord: https://discord.gg/7GwPhzsXgv
+- Maize on Mastodon: https://mastodon.social/invite/D4oj9QhT or if you are already a member @theMaize
+- Maize on Youtube: @theMaizeOfficial
+- Maize on Twitter: @theMaize
