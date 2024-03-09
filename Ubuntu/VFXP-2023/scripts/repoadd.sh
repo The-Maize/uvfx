@@ -16,11 +16,8 @@ PATH="/etc/apt/sources.list.d"
     }
 
     add_repo(){
-
-    check_exists "kelebek333-ubuntu-mint-tools-jammy.list"
-    check_exists "apt-fast-ubuntu-stable-jammy.list"
-    check_exists "zehehio-ubuntu-libxp-jammy.list"
-    check_exists "linuxuprising-ubuntu-libpng12-jammy.list"
-
+        check_exists "apt-fast-ubuntu-stable-jammy.list"
 
     }
+
+    check_exists

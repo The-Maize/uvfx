@@ -41,10 +41,11 @@ script_dir="$(dirname "$(readlink -f "$0")")"
     }
 
     maya(){
+
+    #TODO Host RPM Files and reference here.
         read -p "Do you want to install Maya on Ubuntu. This script is specifically for ubuntu. If you are on a rpm based system please use the rpm based script instead!" install_answer
 
         if ["$install_answer" = "yes"]; then
         echo  "Checking for RPM's"
         convert "$rpm_dir/file1.rpm"
-
     }
