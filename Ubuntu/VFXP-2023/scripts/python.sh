@@ -1,4 +1,5 @@
 #!/bin/bash
+######### Created by Maize @ NanoVFX #########
 
 check_python(){
     python_version=$(python --version 2>$1 | cut -d ' ' -f2)

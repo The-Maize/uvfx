@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+######### Created by Maize @ NanoVFX #########
+
 PATH="/etc/apt/sources.list.d"
 
     check_exists(){
@@ -7,10 +9,8 @@ PATH="/etc/apt/sources.list.d"
                 echo "File '$file' exists skipping"
             else
                 echo "Doesnt exist...Creating entry"
-                add-apt-repository ppa:kelebek333/mint-tools -y
                 add-apt-repository ppa:apt-fast/stable -y
-                add-apt-repository ppa:zeehio/libxp -y
-                add-apt-repository ppa:linuxuprising/libpng12 -y
+
             fi
         done
     }

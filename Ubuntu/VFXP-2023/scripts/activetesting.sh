@@ -1,4 +1,6 @@
- #!/bin/sh
+ #!/bin/bash
+ ######### Created by Maize @ NanoVFX #########
+
     PATH="/etc/apt/sources.list.d"
 
     check_exists(){

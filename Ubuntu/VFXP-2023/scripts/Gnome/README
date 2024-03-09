@@ -1,0 +1,5 @@
+
+######### Created by Maize @ NanoVFX #########
+
+This folder is where gnome specific setups come into play.
+This is only relevant when accepting the qol.sh script or modifying the shell scripts to include more tools you may need that are not in the gtoolkit.sh
