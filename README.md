@@ -4,6 +4,10 @@ Scripts to help with ubuntu as a vfx / gamedev / animation / rendering / pipelin
 
 Welcome to the repository for scripts designed to assist in enabling the usage of various VFX, animation, film, game development, pipeline, and development tools on Ubuntu. This README will guide you through the contents of this repository and how to use the provided scripts effectively.
 
+#### The PPA
+These scripts work in conjunction with a PPA that has been set up to make it easier to find and source the software needed. 
+##### ppa = comming soon
+
 #### Introduction
 This repository aims to streamline the setup process for Ubuntu users in the fields of VFX, animation, film, game development, pipeline, and software development by providing convenient scripts to install and configure essential tools and libraries. Whether you're a professional or a hobbyist, these scripts can help you quickly get up and running with the necessary software stack.
 
