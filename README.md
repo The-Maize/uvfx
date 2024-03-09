@@ -2,6 +2,8 @@
 
 Scripts to help with ubuntu as a vfx / gamedev / animation / rendering / pipeline / film environment. Giving the general toolset you need for a complete easy run.
 
+PLEASE NOTE: this will keep the system as close to the VFX Platform standards as possible. The guidelines set out there are followed, therefore the tools you will have (provided they are available) will be the same or newer to the version you will be installing. the folder structure layout will be in years, such as 2022, 2023, 2024: (for those new to the industry) These are reference years, NOT Maya or application versions. they will be individualised inside each year and each version if there is need for a change between minor / major Linux version releases.
+
 Welcome to the repository for scripts designed to assist in enabling the usage of various VFX, animation, film, game development, pipeline, and development tools on Ubuntu. This README will guide you through the contents of this repository and how to use the provided scripts effectively.
 
 #### The PPA
