@@ -34,7 +34,6 @@ main(){
             read -p ("Check Python Version? This is an important step. It is not recommended to skip setting up the correct python version install, Yes or no?")
 
 
-
 }
 
 main
