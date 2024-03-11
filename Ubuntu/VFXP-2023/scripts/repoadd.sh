@@ -8,7 +8,7 @@ PATH="/etc/apt/sources.list.d"
             if [ -f '$file' ]; then
                 echo "File '$file' exists skipping"
             else
-                echo "Doesnt exist...Creating entry"
+                echo "Doesn't exist...Creating entry"
                 add-apt-repository ppa:apt-fast/stable -y
 
             fi

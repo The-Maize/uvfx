@@ -1,51 +1,43 @@
 #!/bin/bash
 ######### Created by Maize @ NanoVFX #########
 
-script_dir="$(dirname "$(readlink -f "$0")")"
+
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+DEB_DIR="$SCRIPT_DIR/../Maya/DEBS"
+DWNLD_RPM_DIR="$SCRIPT_DIR/../Maya/RPMS"
 
     convert(){
-        for file in "$@"; do
-            if [ -f '$file' ]; then
-                echo "Relevant files exist, Converting"
-                sudo alien *.rpm
+        cd "$DWNLD_RPM_DIR" || { echo "Failed to change directory to $DWNLD_RPM_DIR"; exit 1; }
+
+        if [ -f *.rpm ]; then
+            echo " "
+            echo "Relevant Files Exist... Converting..., THIS CAN TAKE A LONG TIME, PLEASE WAIT ITS NOT FROZEN..."
+            echo " "
+            sudo alien *.rpm
+            mv *.deb $DEB_DIR
+
+            read -p "Do you want to install these now? " install_q
+                if [ "$install_q " = "yes" ]; then
+                    ./inst_maya.sh
+                else
+                    echo " Skipping installation. Manual install will be required!... "
+                fi
+        fi
+
+    #TODO Add Catch function to return to download options
+        else
+            echo " "
+            echo "Files do not exist, Skipping"
+
+        fi
+    }
+
+
+    rpm_cleanup(){
+        read -p "Would you like to cleanup 'delete' the rpm files from your system? " rpmclean_q
+            if [ "$rpmclean_q" = "yes" ]; then
+                rm *.rpm
             else
-                echo "Files do not exist, Skipping..."
+                echo "Leaving the rpm files in: $DWNLD_RPM_DIR if you want to access them later"
             fi
-        done
-    }
-
-    install(){
-
-    }
-
-    dwnld_rpms(){
-        while true; do
-                read -p "Do you want this script to obtain the rpm files on your behalf, Type YES or NO ?" answer
-                case "$answer" in
-                    [Yy]|[Yy][Ee][Ss])
-                        rpm_dir="$script_dir/rpms"
-                        echo "Creating directory for the downloaded rpms in script dir..."
-                        mkdir "$rpm_dir"
-
-                        echo "Downloading RPM Files to '$rpm_dir'..."
-                        wget "$rpm_dir""https://"
-                break;;
-                    [Nn]|[Nn][Oo])
-                        echo "Skipping Download of files... Moving on..."
-                break;;
-                *)
-                echo  "Invalid Response...Please enter Yes or No"
-            esac
-        done
-
-    }
-
-    maya(){
-
-    #TODO Host RPM Files and reference here.
-        read -p "Do you want to install Maya on Ubuntu. This script is specifically for Ubuntu. If you are on a RPM based system please use the RPM based script instead!" install_answer
-
-        if ["$install_answer" = "yes"]; then
-        echo  "Checking for RPM's"
-        convert "$rpm_dir/file1.rpm"
     }
