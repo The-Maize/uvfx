@@ -33,6 +33,7 @@ get_maya_from_nano(){
             else
                 echo "Skipping install..."
             fi
+            return 0
 }
 
 
@@ -55,6 +56,7 @@ dwnld_rpms(){
             echo  "Invalid Response...Please enter Yes or No"
         esac
     done
+
     read -p "Do you want to convert the rpms now?" conv_rpm_q
     if [ "$conv_rpm_q" = "yes" ]; then
         echo "Moving to Convert RPMs...."
@@ -62,6 +64,7 @@ dwnld_rpms(){
     else
         "Skipping..."
     fi
+    return 0
 }
 
 
@@ -102,6 +105,7 @@ get_maya(){
             fi
         fi
     fi
+    return 0
 }
 
 get_maya

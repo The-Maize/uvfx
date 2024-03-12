@@ -11,7 +11,7 @@ install_maya(){
     echo " "
     echo " Please Wait While the installation completes "
     cd $DEB_DIR
-    sudo apt install *.deb
+    sudo apt install *.deb -y
 
     echo "Install complete."
 

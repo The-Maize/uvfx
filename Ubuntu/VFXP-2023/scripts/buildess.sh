@@ -8,7 +8,7 @@ check_bse_soft(){
     msng_pkgs=""
 
     for pkg in $INSOFT; do
-        if ! dpkg -l | grep "^ii $pkg "; then
+        if ! dpkg -| grep "^ii $pkg "; then
             msng_pkgs+="$pkg"
         fi
     done

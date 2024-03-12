@@ -1,6 +1,8 @@
 #!/bin/bash
 ######### Created by Maize @ NanoVFX #########
 
+# Check to see if the repo exists please read ADD_EXTRA-README.md for more details on how to use this file
+
 PATH="/etc/apt/sources.list.d"
 
     check_exists(){
@@ -13,7 +15,9 @@ PATH="/etc/apt/sources.list.d"
 
             fi
         done
+        return 0
     }
+
 
     add_repo(){
         check_exists "apt-fast-ubuntu-stable-jammy.list"

@@ -18,7 +18,8 @@ check_python() {
     else
         echo "Python is not installed or found"
     fi
+
+    return 0
 }
 
 check_python
-exit 0
