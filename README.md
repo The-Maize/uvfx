@@ -1,4 +1,6 @@
 ## UbuntuFX by NanoVFX - Maize
+This will not be ready for use until at least a first actual release. releases can be found on the home page of this repo, under the right hand menu, under releases.
+If there is no release, then this is not ready.
 
 Once released the scripts will be available to clone, During development or patching the code that is currently being worked on is in a separate branch called DEV.
 This branch can be found at this link : [Dev Branch](https://github.com/The-Maize/ubuntufx/tree/dev/)
