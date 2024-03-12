@@ -16,7 +16,7 @@ Currently, the repository supports the installation and configuration of various
 
 System Development tools
 Default tools setup for easier installation and running of the packages below.
-- [x] Autodesk Maya
+- [x] Autodesk Maya - First order of business. 70%
 - [ ] Blender - not implemented yet
 - [ ] Unity - not implemented yet
 - [ ] Unreal Engine - not implemented yet
@@ -76,6 +76,8 @@ Will contain the license file as well as the script in the licenses folder if th
 
 #### How to contact me: - I can be found in the following place I frequent:
 - Maize on Discord: https://discord.gg/7GwPhzsXgv
+| (My personal discord - i am always here, how ever at this stage its pretty empty as i have just created it for the purpose of you all being able to get help, and discuss features changes and just general chatting)
+
 - Maize on Mastodon: https://mastodon.social/invite/D4oj9QhT or if you are already a member @theMaize
 - Maize on Youtube: @theMaizeOfficial
-- Maize on Twitter: @theMaize
+- Maize on Twitter: @OfficiallyMaize
