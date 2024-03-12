@@ -1,27 +1,28 @@
 #!/bin/bash
-######### Created by Maize @ NanoVFX #########
 
-# Check to see if the repo exists please read ADD_EXTRA-README.md for more details on how to use this file
+# testing
 
-PATH="/etc/apt/sources.list.d"
+# Function to check if a repository exists
+repository_exists() {
+    local repo_name="$1"
+    grep -q "^deb .*$repo_name" /etc/apt/sources.list /etc/apt/sources.list.d/*
+}
 
-    check_exists(){
-        for file in "$@"; do
-            if [ -f '$file' ]; then
-                echo "File '$file' exists skipping"
-            else
-                echo "Doesn't exist...Creating entry"
-                add-apt-repository ppa:apt-fast/stable -y
+# Function to add a repository
+add_repository() {
+    local repo_name="$1"
+    sudo add-apt-repository "$repo_name"
+    sudo apt update
+}
 
-            fi
-        done
-        return 0
-    }
+# Example usage:
+repo_to_add="ppa:apt-fast/stable"
 
+if repository_exists "$repo_to_add"; then
+    echo "Repository $repo_to_add already exists."
+else
+    add_repository "$repo_to_add"
+    echo "Repository $repo_to_add added successfully."
+fi
 
-    add_repo(){
-        check_exists "apt-fast-ubuntu-stable-jammy.list"
-
-    }
-
-    check_exists
+return 0

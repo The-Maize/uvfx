@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ######### Created by Maize @ NanoVFX #########
 
 INSOFT= "build-essential subversion cmake libx11-dev libxxf86vm-dev libxcursor-dev libxi-dev libxrandr-dev libxinerama-dev libegl-dev ibwayland-dev wayland-protocols libxkbcommon-dev libdbus-1-dev linux-libc-dev libzstd-dev libepoxy-dev dpkg-dev debhelper zlib1g-dev"

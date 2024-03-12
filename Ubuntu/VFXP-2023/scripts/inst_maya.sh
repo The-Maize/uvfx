@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ######### Created by Maize @ NanoVFX #########
 
 

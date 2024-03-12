@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ######### Created by Maize @ NanoVFX #########
 ######### This script gets Autodesk Maya from one of 2 places.
 ######### You can specify getting from official installer and converting Maya to .deb files
