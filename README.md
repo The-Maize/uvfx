@@ -1,5 +1,10 @@
-## UbuntuFX by NanoVFX - Maize
-This will not be ready for use until at least a first actual release. releases can be found on the home page of this repo, under the right hand menu, under releases.
+## UFX by NanoVFX - Maize
+
+Git Project Update: Still working on things behind the scenes debugging certain issues and reevaluating some of the code and what it does. Originally this was a series of scripts to install maya and some other software on ubuntu based linux. how ever i am not able to provide those packages and i cant get access to a link that is permanent approved from autodesk. How ever, that just means that there is a pivot to supporting different things, such as automating other problems of the vfx pipline. More to come. 
+
+The git repo was renamed due to similarity to the availability of a closeness to a certain dodgy chinese software in the linux community which i dont want any relation too my software as i pride my self on safe usable software for all.
+
+This will not be ready for use until at least a first actual release. releases can be found on the home page of this repo (Usually this page), under the right hand menu, under releases.
 If there is no release, then this is not ready.
 
 Once released the scripts will be available to clone, During development or patching the code that is currently being worked on is in a separate branch called DEV.
