@@ -1,0 +1,3583 @@
+# 0 "scripts/symbols.out.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 0 "<command-line>" 2
+# 1 "scripts/symbols.out.c"
+# 1 "./scripts/symbols.dfn" 1
+# 29 "./scripts/symbols.dfn"
+# 1 "./scripts/pnglibconf.h.prebuilt" 1
+# 30 "./scripts/symbols.dfn" 2
+# 1 "./scripts/../png.h" 1
+# 471 "./scripts/../png.h"
+# 1 "./scripts/../pngconf.h" 1
+# 447 "./scripts/../pngconf.h"
+typedef unsigned long png_uint_32;
+typedef long png_int_32;
+
+typedef unsigned short png_uint_16;
+typedef short png_int_16;
+typedef unsigned char png_byte;
+
+
+
+
+typedef size_t png_size_t;
+# 524 "./scripts/../pngconf.h"
+typedef png_int_32 png_fixed_point;
+
+
+typedef void * png_voidp;
+typedef const void * png_const_voidp;
+typedef png_byte * png_bytep;
+typedef const png_byte * png_const_bytep;
+typedef png_uint_32 * png_uint_32p;
+typedef const png_uint_32 * png_const_uint_32p;
+typedef png_int_32 * png_int_32p;
+typedef const png_int_32 * png_const_int_32p;
+typedef png_uint_16 * png_uint_16p;
+typedef const png_uint_16 * png_const_uint_16p;
+typedef png_int_16 * png_int_16p;
+typedef const png_int_16 * png_const_int_16p;
+typedef char * png_charp;
+typedef const char * png_const_charp;
+typedef png_fixed_point * png_fixed_point_p;
+typedef const png_fixed_point * png_const_fixed_point_p;
+typedef png_size_t * png_size_tp;
+typedef const png_size_t * png_const_size_tp;
+
+
+typedef FILE * png_FILE_p;
+
+
+
+typedef double * png_doublep;
+typedef const double * png_const_doublep;
+
+
+
+typedef png_byte * * png_bytepp;
+typedef png_uint_32 * * png_uint_32pp;
+typedef png_int_32 * * png_int_32pp;
+typedef png_uint_16 * * png_uint_16pp;
+typedef png_int_16 * * png_int_16pp;
+typedef const char * * png_const_charpp;
+typedef char * * png_charpp;
+typedef png_fixed_point * * png_fixed_point_pp;
+
+typedef double * * png_doublepp;
+
+
+
+typedef char * * * png_charppp;
+# 594 "./scripts/../pngconf.h"
+       typedef png_size_t png_alloc_size_t;
+# 472 "./scripts/../png.h" 2
+# 561 "./scripts/../png.h"
+typedef char* png_libpng_version_1_5_15;
+
+
+
+
+
+typedef struct png_color_struct
+{
+   png_byte red;
+   png_byte green;
+   png_byte blue;
+} png_color;
+typedef png_color * png_colorp;
+typedef const png_color * png_const_colorp;
+typedef png_color * * png_colorpp;
+
+typedef struct png_color_16_struct
+{
+   png_byte index;
+   png_uint_16 red;
+   png_uint_16 green;
+   png_uint_16 blue;
+   png_uint_16 gray;
+} png_color_16;
+typedef png_color_16 * png_color_16p;
+typedef const png_color_16 * png_const_color_16p;
+typedef png_color_16 * * png_color_16pp;
+
+typedef struct png_color_8_struct
+{
+   png_byte red;
+   png_byte green;
+   png_byte blue;
+   png_byte gray;
+   png_byte alpha;
+} png_color_8;
+typedef png_color_8 * png_color_8p;
+typedef const png_color_8 * png_const_color_8p;
+typedef png_color_8 * * png_color_8pp;
+
+
+
+
+
+typedef struct png_sPLT_entry_struct
+{
+   png_uint_16 red;
+   png_uint_16 green;
+   png_uint_16 blue;
+   png_uint_16 alpha;
+   png_uint_16 frequency;
+} png_sPLT_entry;
+typedef png_sPLT_entry * png_sPLT_entryp;
+typedef const png_sPLT_entry * png_const_sPLT_entryp;
+typedef png_sPLT_entry * * png_sPLT_entrypp;
+
+
+
+
+
+
+typedef struct png_sPLT_struct
+{
+   png_charp name;
+   png_byte depth;
+   png_sPLT_entryp entries;
+   png_int_32 nentries;
+} png_sPLT_t;
+typedef png_sPLT_t * png_sPLT_tp;
+typedef const png_sPLT_t * png_const_sPLT_tp;
+typedef png_sPLT_t * * png_sPLT_tpp;
+# 651 "./scripts/../png.h"
+typedef struct png_text_struct
+{
+   int compression;
+
+
+
+
+   png_charp key;
+   png_charp text;
+
+   png_size_t text_length;
+   png_size_t itxt_length;
+   png_charp lang;
+
+   png_charp lang_key;
+
+} png_text;
+typedef png_text * png_textp;
+typedef const png_text * png_const_textp;
+typedef png_text * * png_textpp;
+# 689 "./scripts/../png.h"
+typedef struct png_time_struct
+{
+   png_uint_16 year;
+   png_byte month;
+   png_byte day;
+   png_byte hour;
+   png_byte minute;
+   png_byte second;
+} png_time;
+typedef png_time * png_timep;
+typedef const png_time * png_const_timep;
+typedef png_time * * png_timepp;
+# 709 "./scripts/../png.h"
+typedef struct png_unknown_chunk_t
+{
+    png_byte name[5];
+    png_byte *data;
+    png_size_t size;
+
+
+    png_byte location;
+}
+
+
+png_unknown_chunk;
+typedef png_unknown_chunk * png_unknown_chunkp;
+typedef const png_unknown_chunk * png_const_unknown_chunkp;
+typedef png_unknown_chunk * * png_unknown_chunkpp;
+# 736 "./scripts/../png.h"
+typedef struct png_info_def png_info;
+typedef png_info * png_infop;
+typedef const png_info * png_const_infop;
+typedef png_info * * png_infopp;
+# 846 "./scripts/../png.h"
+typedef struct png_row_info_struct
+{
+   png_uint_32 width;
+   png_size_t rowbytes;
+   png_byte color_type;
+   png_byte bit_depth;
+   png_byte channels;
+   png_byte pixel_depth;
+} png_row_info;
+
+typedef png_row_info * png_row_infop;
+typedef png_row_info * * png_row_infopp;
+
+
+
+
+
+typedef struct png_struct_def png_struct;
+typedef const png_struct * png_const_structp;
+typedef png_struct * png_structp;
+# 875 "./scripts/../png.h"
+typedef void ( *png_error_ptr) (png_structp, png_const_charp);
+typedef void ( *png_rw_ptr) (png_structp, png_bytep, png_size_t);
+typedef void ( *png_flush_ptr) (png_structp);
+typedef void ( *png_read_status_ptr) (png_structp, png_uint_32, int)
+         ;
+typedef void ( *png_write_status_ptr) (png_structp, png_uint_32, int)
+         ;
+
+
+typedef void ( *png_progressive_info_ptr) (png_structp, png_infop);
+typedef void ( *png_progressive_end_ptr) (png_structp, png_infop);
+# 897 "./scripts/../png.h"
+typedef void ( *png_progressive_row_ptr) (png_structp, png_bytep, png_uint_32, int)
+                      ;
+
+
+
+
+typedef void ( *png_user_transform_ptr) (png_structp, png_row_infop, png_bytep)
+               ;
+
+
+
+typedef int ( *png_user_chunk_ptr) (png_structp, png_unknown_chunkp)
+                        ;
+
+
+typedef void ( *png_unknown_chunk_ptr) (png_structp);
+# 927 "./scripts/../png.h"
+typedef void ( *png_longjmp_ptr) (jmp_buf, int);
+# 964 "./scripts/../png.h"
+typedef png_voidp ( *png_malloc_ptr) (png_structp, png_alloc_size_t)
+                      ;
+typedef void ( *png_free_ptr) (png_structp, png_voidp);
+
+typedef png_struct * * png_structpp;
+# 1000 "./scripts/../png.h"
+PNG_DFN "@" png_access_version_number "@ @@" 1 "@";
+
+
+
+
+PNG_DFN "@" png_set_sig_bytes "@ @@" 2 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_sig_cmp "@ @@" 3 "@"
+                             ;
+
+
+
+
+
+
+
+PNG_DFN "@" png_create_read_struct "@ @@" 4 "@"
+
+
+                  ;
+
+
+PNG_DFN "@" png_create_write_struct "@ @@" 5 "@"
+
+
+                  ;
+
+PNG_DFN "@" png_get_compression_buffer_size "@ @@" 6 "@"
+                                ;
+
+PNG_DFN "@" png_set_compression_buffer_size "@ @@" 7 "@"
+                     ;
+# 1049 "./scripts/../png.h"
+PNG_DFN "@" png_set_longjmp_fn "@ @@" 8 "@"
+                                                     ;
+# 1062 "./scripts/../png.h"
+PNG_DFN "@" png_longjmp "@ @@" 9 "@"
+                 ;
+
+
+
+PNG_DFN "@" png_reset_zstream "@ @@" 10 "@";
+
+
+
+
+PNG_DFN "@" png_create_read_struct_2 "@ @@" 11 "@"
+
+
+
+                  ;
+PNG_DFN "@" png_create_write_struct_2 "@ @@" 12 "@"
+
+
+
+                  ;
+
+
+
+PNG_DFN "@" png_write_sig "@ @@" 13 "@";
+
+
+PNG_DFN "@" png_write_chunk "@ @@" 14 "@"
+                                                         ;
+
+
+PNG_DFN "@" png_write_chunk_start "@ @@" 15 "@"
+                                                    ;
+
+
+PNG_DFN "@" png_write_chunk_data "@ @@" 16 "@"
+                                             ;
+
+
+PNG_DFN "@" png_write_chunk_end "@ @@" 17 "@";
+
+
+PNG_DFN "@" png_create_info_struct "@ @@" 18 "@"
+                  ;
+
+PNG_DFN "@" png_info_init_3 "@ @@" 19 "@"
+                                     ;
+
+
+PNG_DFN "@" png_write_info_before_PLTE "@ @@" 20 "@"
+                                              ;
+PNG_DFN "@" png_write_info "@ @@" 21 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_info "@ @@" 22 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_convert_to_rfc1123 "@ @@" 23 "@"
+
+                           ;
+
+
+
+
+PNG_DFN "@" png_convert_from_struct_tm "@ @@" 24 "@"
+                                     ;
+
+
+PNG_DFN "@" png_convert_from_time_t "@ @@" 25 "@"
+                                    ;
+
+
+
+
+PNG_DFN "@" png_set_expand "@ @@" 26 "@";
+PNG_DFN "@" png_set_expand_gray_1_2_4_to_8 "@ @@" 27 "@";
+PNG_DFN "@" png_set_palette_to_rgb "@ @@" 28 "@";
+PNG_DFN "@" png_set_tRNS_to_alpha "@ @@" 29 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_expand_16 "@ @@" 221 "@";
+
+
+
+
+PNG_DFN "@" png_set_bgr "@ @@" 30 "@";
+
+
+
+
+PNG_DFN "@" png_set_gray_to_rgb "@ @@" 31 "@";
+# 1169 "./scripts/../png.h"
+PNG_DFN "@" png_set_rgb_to_gray "@ @@" 32 "@";
+
+PNG_DFN "@" png_set_rgb_to_gray_fixed "@ @@" 33 "@";
+
+
+PNG_DFN "@" png_get_rgb_to_gray_status "@ @@" 34 "@"
+             ;
+
+
+
+PNG_DFN "@" png_build_grayscale_palette "@ @@" 35 "@"
+                        ;
+# 1239 "./scripts/../png.h"
+PNG_DFN "@" png_set_alpha_mode "@ @@" 227 "@";
+
+PNG_DFN "@" png_set_alpha_mode_fixed "@ @@" 228 "@";
+# 1393 "./scripts/../png.h"
+PNG_DFN "@" png_set_strip_alpha "@ @@" 36 "@";
+
+
+
+
+PNG_DFN "@" png_set_swap_alpha "@ @@" 37 "@";
+
+
+
+
+PNG_DFN "@" png_set_invert_alpha "@ @@" 38 "@";
+
+
+
+
+PNG_DFN "@" png_set_filler "@ @@" 39 "@"
+               ;
+
+
+
+
+PNG_DFN "@" png_set_add_alpha "@ @@" 40 "@"
+
+               ;
+
+
+
+
+PNG_DFN "@" png_set_swap "@ @@" 41 "@";
+
+
+
+
+PNG_DFN "@" png_set_packing "@ @@" 42 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_packswap "@ @@" 43 "@";
+
+
+
+
+PNG_DFN "@" png_set_shift "@ @@" 44 "@"
+               ;
+# 1449 "./scripts/../png.h"
+PNG_DFN "@" png_set_interlace_handling "@ @@" 45 "@";
+
+
+
+
+PNG_DFN "@" png_set_invert_mono "@ @@" 46 "@";
+# 1463 "./scripts/../png.h"
+PNG_DFN "@" png_set_background "@ @@" 47 "@";
+
+
+PNG_DFN "@" png_set_background_fixed "@ @@" 215 "@";
+# 1479 "./scripts/../png.h"
+PNG_DFN "@" png_set_scale_16 "@ @@" 229 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_strip_16 "@ @@" 48 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_quantize "@ @@" 49 "@"
+
+
+                       ;
+# 1515 "./scripts/../png.h"
+PNG_DFN "@" png_set_gamma "@ @@" 50 "@";
+
+
+PNG_DFN "@" png_set_gamma_fixed "@ @@" 208 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_flush "@ @@" 51 "@";
+
+PNG_DFN "@" png_write_flush "@ @@" 52 "@";
+
+
+
+PNG_DFN "@" png_start_read_image "@ @@" 53 "@";
+
+
+PNG_DFN "@" png_read_update_info "@ @@" 54 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_rows "@ @@" 55 "@"
+                                                  ;
+
+
+
+
+PNG_DFN "@" png_read_row "@ @@" 56 "@"
+                           ;
+
+
+
+
+PNG_DFN "@" png_read_image "@ @@" 57 "@";
+
+
+
+PNG_DFN "@" png_write_row "@ @@" 58 "@"
+                                               ;
+
+
+
+
+
+
+PNG_DFN "@" png_write_rows "@ @@" 59 "@"
+                          ;
+
+
+PNG_DFN "@" png_write_image "@ @@" 60 "@"
+                                            ;
+
+
+PNG_DFN "@" png_write_end "@ @@" 61 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_end "@ @@" 62 "@";
+
+
+
+PNG_DFN "@" png_destroy_info_struct "@ @@" 63 "@"
+                             ;
+
+
+PNG_DFN "@" png_destroy_read_struct "@ @@" 64 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_destroy_write_struct "@ @@" 65 "@"
+                             ;
+
+
+PNG_DFN "@" png_set_crc_action "@ @@" 66 "@"
+                                                             ;
+# 1621 "./scripts/../png.h"
+PNG_DFN "@" png_set_filter "@ @@" 67 "@"
+                                                   ;
+# 1677 "./scripts/../png.h"
+PNG_DFN "@" png_set_filter_heuristics "@ @@" 68 "@";
+
+
+PNG_DFN "@" png_set_filter_heuristics_fixed "@ @@" 209 "@";
+# 1702 "./scripts/../png.h"
+PNG_DFN "@" png_set_compression_level "@ @@" 69 "@"
+                                     ;
+
+PNG_DFN "@" png_set_compression_mem_level "@ @@" 70 "@"
+                   ;
+
+PNG_DFN "@" png_set_compression_strategy "@ @@" 71 "@"
+                  ;
+
+
+
+
+PNG_DFN "@" png_set_compression_window_bits "@ @@" 72 "@"
+                     ;
+
+PNG_DFN "@" png_set_compression_method "@ @@" 73 "@"
+                ;
+
+
+
+
+PNG_DFN "@" png_set_text_compression_level "@ @@" 222 "@"
+                                     ;
+
+PNG_DFN "@" png_set_text_compression_mem_level "@ @@" 223 "@"
+                   ;
+
+PNG_DFN "@" png_set_text_compression_strategy "@ @@" 224 "@"
+                  ;
+
+
+
+
+PNG_DFN "@" png_set_text_compression_window_bits "@ @@" 225 "@"
+                              ;
+
+PNG_DFN "@" png_set_text_compression_method "@ @@" 226 "@"
+                ;
+# 1753 "./scripts/../png.h"
+PNG_DFN "@" png_init_io "@ @@" 74 "@";
+# 1764 "./scripts/../png.h"
+PNG_DFN "@" png_set_error_fn "@ @@" 75 "@"
+
+                                                      ;
+
+
+PNG_DFN "@" png_get_error_ptr "@ @@" 76 "@";
+# 1781 "./scripts/../png.h"
+PNG_DFN "@" png_set_write_fn "@ @@" 77 "@"
+                                                             ;
+
+
+PNG_DFN "@" png_set_read_fn "@ @@" 78 "@"
+                             ;
+
+
+PNG_DFN "@" png_get_io_ptr "@ @@" 79 "@";
+
+PNG_DFN "@" png_set_read_status_fn "@ @@" 80 "@"
+                                     ;
+
+PNG_DFN "@" png_set_write_status_fn "@ @@" 81 "@"
+                                       ;
+
+
+
+PNG_DFN "@" png_set_mem_fn "@ @@" 82 "@"
+                                                    ;
+
+PNG_DFN "@" png_get_mem_ptr "@ @@" 83 "@";
+
+
+
+PNG_DFN "@" png_set_read_user_transform_fn "@ @@" 84 "@"
+                                                   ;
+
+
+
+PNG_DFN "@" png_set_write_user_transform_fn "@ @@" 85 "@"
+                                                    ;
+
+
+
+PNG_DFN "@" png_set_user_transform_info "@ @@" 86 "@"
+
+                                 ;
+
+PNG_DFN "@" png_get_user_transform_ptr "@ @@" 87 "@"
+                                ;
+# 1836 "./scripts/../png.h"
+PNG_DFN "@" png_get_current_row_number "@ @@" 217 "@";
+PNG_DFN "@" png_get_current_pass_number "@ @@" 218 "@";
+
+
+
+PNG_DFN "@" png_set_read_user_chunk_fn "@ @@" 88 "@"
+                                                                     ;
+PNG_DFN "@" png_get_user_chunk_ptr "@ @@" 89 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_progressive_read_fn "@ @@" 90 "@"
+
+                                                                    ;
+
+
+PNG_DFN "@" png_get_progressive_ptr "@ @@" 91 "@";
+
+
+PNG_DFN "@" png_process_data "@ @@" 92 "@"
+
+                                              ;
+# 1869 "./scripts/../png.h"
+PNG_DFN "@" png_process_data_pause "@ @@" 219 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_process_data_skip "@ @@" 220 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_progressive_combine_row "@ @@" 93 "@"
+                                                ;
+
+
+
+PNG_DFN "@" png_malloc "@ @@" 94 "@"
+
+                  ;
+
+PNG_DFN "@" png_calloc "@ @@" 95 "@"
+
+                  ;
+
+
+PNG_DFN "@" png_malloc_warn "@ @@" 96 "@"
+                                          ;
+
+
+PNG_DFN "@" png_free "@ @@" 97 "@";
+
+
+PNG_DFN "@" png_free_data "@ @@" 98 "@"
+                                                                            ;
+
+
+
+PNG_DFN "@" png_data_freer "@ @@" 99 "@"
+                                                                           ;
+# 1934 "./scripts/../png.h"
+PNG_DFN "@" png_malloc_default "@ @@" 100 "@"
+                                          ;
+PNG_DFN "@" png_free_default "@ @@" 101 "@";
+
+
+
+
+PNG_DFN "@" png_error "@ @@" 102 "@"
+
+                 ;
+
+
+PNG_DFN "@" png_chunk_error "@ @@" 103 "@"
+                                                 ;
+# 1956 "./scripts/../png.h"
+PNG_DFN "@" png_warning "@ @@" 105 "@"
+                                     ;
+
+
+PNG_DFN "@" png_chunk_warning "@ @@" 106 "@"
+                                     ;
+
+
+
+
+
+
+PNG_DFN "@" png_benign_error "@ @@" 107 "@"
+                                     ;
+
+
+
+PNG_DFN "@" png_chunk_benign_error "@ @@" 108 "@"
+                                     ;
+
+PNG_DFN "@" png_set_benign_errors "@ @@" 109 "@"
+                                       ;
+# 2001 "./scripts/../png.h"
+PNG_DFN "@" png_get_valid "@ @@" 110 "@"
+
+                      ;
+
+
+PNG_DFN "@" png_get_rowbytes "@ @@" 111 "@"
+                              ;
+
+
+
+
+
+PNG_DFN "@" png_get_rows "@ @@" 112 "@"
+                                                          ;
+
+
+
+PNG_DFN "@" png_set_rows "@ @@" 113 "@"
+                                                 ;
+
+
+
+PNG_DFN "@" png_get_channels "@ @@" 114 "@"
+                                                          ;
+
+
+
+PNG_DFN "@" png_get_image_width "@ @@" 115 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_image_height "@ @@" 116 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_bit_depth "@ @@" 117 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_get_color_type "@ @@" 118 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_filter_type "@ @@" 119 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_interlace_type "@ @@" 120 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_compression_type "@ @@" 121 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_pixels_per_meter "@ @@" 122 "@"
+                                                          ;
+PNG_DFN "@" png_get_x_pixels_per_meter "@ @@" 123 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_pixels_per_meter "@ @@" 124 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_get_pixel_aspect_ratio "@ @@" 125 "@";
+
+PNG_DFN "@" png_get_pixel_aspect_ratio_fixed "@ @@" 210 "@";
+
+
+
+PNG_DFN "@" png_get_x_offset_pixels "@ @@" 126 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_offset_pixels "@ @@" 127 "@"
+                                                          ;
+PNG_DFN "@" png_get_x_offset_microns "@ @@" 128 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_offset_microns "@ @@" 129 "@"
+                                                          ;
+
+
+
+
+PNG_DFN "@" png_get_signature "@ @@" 130 "@"
+                                                    ;
+
+
+PNG_DFN "@" png_get_bKGD "@ @@" 131 "@"
+
+                               ;
+
+
+
+PNG_DFN "@" png_set_bKGD "@ @@" 132 "@"
+                                    ;
+
+
+
+PNG_DFN "@" png_get_cHRM "@ @@" 133 "@";
+
+
+
+PNG_DFN "@" png_get_cHRM_XYZ "@ @@" 230 "@";
+
+
+
+
+PNG_DFN "@" png_get_cHRM_fixed "@ @@" 134 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_get_cHRM_XYZ_fixed "@ @@" 231 "@";
+# 2124 "./scripts/../png.h"
+PNG_DFN "@" png_set_cHRM "@ @@" 135 "@";
+
+
+
+PNG_DFN "@" png_set_cHRM_XYZ "@ @@" 232 "@";
+
+
+
+PNG_DFN "@" png_set_cHRM_fixed "@ @@" 136 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_cHRM_XYZ_fixed "@ @@" 233 "@";
+# 2147 "./scripts/../png.h"
+PNG_DFN "@" png_get_gAMA "@ @@" 137 "@";
+
+
+PNG_DFN "@" png_get_gAMA_fixed "@ @@" 138 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_gAMA "@ @@" 139 "@";
+
+PNG_DFN "@" png_set_gAMA_fixed "@ @@" 140 "@";
+
+
+
+
+PNG_DFN "@" png_get_hIST "@ @@" 141 "@"
+
+                        ;
+
+
+
+PNG_DFN "@" png_set_hIST "@ @@" 142 "@"
+                                                 ;
+
+
+PNG_DFN "@" png_get_IHDR "@ @@" 143 "@"
+
+
+                                                                        ;
+
+PNG_DFN "@" png_set_IHDR "@ @@" 144 "@"
+
+
+                                                                     ;
+
+
+PNG_DFN "@" png_get_oFFs "@ @@" 145 "@"
+
+                                                                ;
+
+
+
+PNG_DFN "@" png_set_oFFs "@ @@" 146 "@"
+
+                                                             ;
+
+
+
+PNG_DFN "@" png_get_pCAL "@ @@" 147 "@"
+
+
+
+                                          ;
+
+
+
+PNG_DFN "@" png_set_pCAL "@ @@" 148 "@"
+
+
+                                                           ;
+
+
+
+PNG_DFN "@" png_get_pHYs "@ @@" 149 "@"
+
+                                                            ;
+
+
+
+PNG_DFN "@" png_set_pHYs "@ @@" 150 "@"
+
+                                                         ;
+
+
+PNG_DFN "@" png_get_PLTE "@ @@" 151 "@"
+
+                                           ;
+
+PNG_DFN "@" png_set_PLTE "@ @@" 152 "@"
+
+                                               ;
+
+
+PNG_DFN "@" png_get_sBIT "@ @@" 153 "@"
+
+                           ;
+
+
+
+PNG_DFN "@" png_set_sBIT "@ @@" 154 "@"
+                                                                          ;
+
+
+
+PNG_DFN "@" png_get_sRGB "@ @@" 155 "@"
+                                                     ;
+
+
+
+PNG_DFN "@" png_set_sRGB "@ @@" 156 "@"
+                                                               ;
+PNG_DFN "@" png_set_sRGB_gAMA_and_cHRM "@ @@" 157 "@"
+                                         ;
+
+
+
+PNG_DFN "@" png_get_iCCP "@ @@" 158 "@"
+
+
+                          ;
+
+
+
+PNG_DFN "@" png_set_iCCP "@ @@" 159 "@"
+
+
+                         ;
+
+
+
+PNG_DFN "@" png_get_sPLT "@ @@" 160 "@"
+
+                          ;
+
+
+
+PNG_DFN "@" png_set_sPLT "@ @@" 161 "@"
+
+                                             ;
+
+
+
+
+PNG_DFN "@" png_get_text "@ @@" 162 "@"
+
+                                        ;
+# 2294 "./scripts/../png.h"
+PNG_DFN "@" png_set_text "@ @@" 163 "@"
+
+                                            ;
+
+
+
+PNG_DFN "@" png_get_tIME "@ @@" 164 "@"
+                                                                         ;
+
+
+
+PNG_DFN "@" png_set_tIME "@ @@" 165 "@"
+                                                                        ;
+
+
+
+PNG_DFN "@" png_get_tRNS "@ @@" 166 "@"
+
+                                                                        ;
+
+
+
+PNG_DFN "@" png_set_tRNS "@ @@" 167 "@"
+
+
+                                     ;
+
+
+
+PNG_DFN "@" png_get_sCAL "@ @@" 168 "@";
+# 2332 "./scripts/../png.h"
+PNG_DFN "@" png_get_sCAL_fixed "@ @@" 214 "@";
+
+
+
+
+PNG_DFN "@" png_get_sCAL_s "@ @@" 169 "@"
+
+                                                      ;
+
+PNG_DFN "@" png_set_sCAL "@ @@" 170 "@";
+
+
+PNG_DFN "@" png_set_sCAL_fixed "@ @@" 213 "@";
+
+
+PNG_DFN "@" png_set_sCAL_s "@ @@" 171 "@"
+
+                                                               ;
+# 2364 "./scripts/../png.h"
+PNG_DFN "@" png_set_keep_unknown_chunks "@ @@" 172 "@"
+
+                                                ;
+
+
+
+
+PNG_DFN "@" png_handle_as_unknown "@ @@" 173 "@"
+                                ;
+
+
+PNG_DFN "@" png_set_unknown_chunks "@ @@" 174 "@"
+
+                      ;
+PNG_DFN "@" png_set_unknown_chunk_location "@ @@" 175 "@"
+                                                                       ;
+PNG_DFN "@" png_get_unknown_chunks "@ @@" 176 "@"
+                                                           ;
+
+
+
+
+
+
+PNG_DFN "@" png_set_invalid "@ @@" 177 "@"
+                                                        ;
+
+
+
+PNG_DFN "@" png_read_png "@ @@" 178 "@"
+                                      ;
+PNG_DFN "@" png_write_png "@ @@" 179 "@"
+                                      ;
+
+
+PNG_DFN "@" png_get_copyright "@ @@" 180 "@"
+                                ;
+PNG_DFN "@" png_get_header_ver "@ @@" 181 "@"
+                                ;
+PNG_DFN "@" png_get_header_version "@ @@" 182 "@"
+                                ;
+PNG_DFN "@" png_get_libpng_ver "@ @@" 183 "@"
+                                ;
+
+
+PNG_DFN "@" png_permit_mng_features "@ @@" 184 "@"
+                                        ;
+# 2430 "./scripts/../png.h"
+PNG_DFN "@" png_set_user_limits "@ @@" 186 "@"
+                                                             ;
+PNG_DFN "@" png_get_user_width_max "@ @@" 187 "@"
+                                ;
+PNG_DFN "@" png_get_user_height_max "@ @@" 188 "@"
+                                ;
+
+PNG_DFN "@" png_set_chunk_cache_max "@ @@" 189 "@"
+                                      ;
+PNG_DFN "@" png_get_chunk_cache_max "@ @@" 190 "@"
+                                ;
+
+PNG_DFN "@" png_set_chunk_malloc_max "@ @@" 191 "@"
+                                           ;
+PNG_DFN "@" png_get_chunk_malloc_max "@ @@" 192 "@"
+                                ;
+
+
+
+PNG_DFN "@" png_get_pixels_per_inch "@ @@" 193 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_x_pixels_per_inch "@ @@" 194 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_y_pixels_per_inch "@ @@" 195 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_x_offset_inches "@ @@" 196 "@";
+
+
+PNG_DFN "@" png_get_x_offset_inches_fixed "@ @@" 211 "@";
+
+
+
+PNG_DFN "@" png_get_y_offset_inches "@ @@" 197 "@";
+
+
+PNG_DFN "@" png_get_y_offset_inches_fixed "@ @@" 212 "@";
+
+
+
+
+PNG_DFN "@" png_get_pHYs_dpi "@ @@" 198 "@"
+
+                    ;
+
+
+
+
+
+PNG_DFN "@" png_get_io_state "@ @@" 199 "@";
+
+PNG_DFN "@" png_get_io_chunk_name "@ @@" 200 "@"
+                                          ;
+PNG_DFN "@" png_get_io_chunk_type "@ @@" 216 "@"
+                                ;
+# 2605 "./scripts/../png.h"
+PNG_DFN "@" png_get_uint_32 "@ @@" 201 "@";
+PNG_DFN "@" png_get_uint_16 "@ @@" 202 "@";
+PNG_DFN "@" png_get_int_32 "@ @@" 203 "@";
+
+
+PNG_DFN "@" png_get_uint_31 "@ @@" 204 "@"
+                         ;
+
+
+
+
+PNG_DFN "@" png_save_uint_32 "@ @@" 205 "@";
+
+
+PNG_DFN "@" png_save_int_32 "@ @@" 206 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_save_uint_16 "@ @@" 207 "@";
+# 2657 "./scripts/../png.h"
+PNG_DFN "@" png_set_check_for_invalid_index "@ @@" 234 "@"
+                 ;
+
+PNG_DFN "@" png_get_palette_max "@ @@" 235 "@"
+                              ;
+# 2715 "./scripts/../png.h"
+  PNG_DFN "; @@" 236 "@";
+# 31 "./scripts/symbols.dfn" 2
+# 48 "./scripts/symbols.dfn"
+# 1 "./scripts/../png.h" 1
+# 561 "./scripts/../png.h"
+typedef char* png_libpng_version_1_5_15;
+
+
+
+
+
+typedef struct png_color_struct
+{
+   png_byte red;
+   png_byte green;
+   png_byte blue;
+} png_color;
+typedef png_color * png_colorp;
+typedef const png_color * png_const_colorp;
+typedef png_color * * png_colorpp;
+
+typedef struct png_color_16_struct
+{
+   png_byte index;
+   png_uint_16 red;
+   png_uint_16 green;
+   png_uint_16 blue;
+   png_uint_16 gray;
+} png_color_16;
+typedef png_color_16 * png_color_16p;
+typedef const png_color_16 * png_const_color_16p;
+typedef png_color_16 * * png_color_16pp;
+
+typedef struct png_color_8_struct
+{
+   png_byte red;
+   png_byte green;
+   png_byte blue;
+   png_byte gray;
+   png_byte alpha;
+} png_color_8;
+typedef png_color_8 * png_color_8p;
+typedef const png_color_8 * png_const_color_8p;
+typedef png_color_8 * * png_color_8pp;
+
+
+
+
+
+typedef struct png_sPLT_entry_struct
+{
+   png_uint_16 red;
+   png_uint_16 green;
+   png_uint_16 blue;
+   png_uint_16 alpha;
+   png_uint_16 frequency;
+} png_sPLT_entry;
+typedef png_sPLT_entry * png_sPLT_entryp;
+typedef const png_sPLT_entry * png_const_sPLT_entryp;
+typedef png_sPLT_entry * * png_sPLT_entrypp;
+
+
+
+
+
+
+typedef struct png_sPLT_struct
+{
+   png_charp name;
+   png_byte depth;
+   png_sPLT_entryp entries;
+   png_int_32 nentries;
+} png_sPLT_t;
+typedef png_sPLT_t * png_sPLT_tp;
+typedef const png_sPLT_t * png_const_sPLT_tp;
+typedef png_sPLT_t * * png_sPLT_tpp;
+# 651 "./scripts/../png.h"
+typedef struct png_text_struct
+{
+   int compression;
+
+
+
+
+   png_charp key;
+   png_charp text;
+
+   png_size_t text_length;
+   png_size_t itxt_length;
+   png_charp lang;
+
+   png_charp lang_key;
+
+} png_text;
+typedef png_text * png_textp;
+typedef const png_text * png_const_textp;
+typedef png_text * * png_textpp;
+# 689 "./scripts/../png.h"
+typedef struct png_time_struct
+{
+   png_uint_16 year;
+   png_byte month;
+   png_byte day;
+   png_byte hour;
+   png_byte minute;
+   png_byte second;
+} png_time;
+typedef png_time * png_timep;
+typedef const png_time * png_const_timep;
+typedef png_time * * png_timepp;
+# 709 "./scripts/../png.h"
+typedef struct png_unknown_chunk_t
+{
+    png_byte name[5];
+    png_byte *data;
+    png_size_t size;
+
+
+    png_byte location;
+}
+
+
+png_unknown_chunk;
+typedef png_unknown_chunk * png_unknown_chunkp;
+typedef const png_unknown_chunk * png_const_unknown_chunkp;
+typedef png_unknown_chunk * * png_unknown_chunkpp;
+# 736 "./scripts/../png.h"
+typedef struct png_info_def png_info;
+typedef png_info * png_infop;
+typedef const png_info * png_const_infop;
+typedef png_info * * png_infopp;
+# 846 "./scripts/../png.h"
+typedef struct png_row_info_struct
+{
+   png_uint_32 width;
+   png_size_t rowbytes;
+   png_byte color_type;
+   png_byte bit_depth;
+   png_byte channels;
+   png_byte pixel_depth;
+} png_row_info;
+
+typedef png_row_info * png_row_infop;
+typedef png_row_info * * png_row_infopp;
+
+
+
+
+
+typedef struct png_struct_def png_struct;
+typedef const png_struct * png_const_structp;
+typedef png_struct * png_structp;
+# 875 "./scripts/../png.h"
+typedef void ( *png_error_ptr) (png_structp, png_const_charp);
+typedef void ( *png_rw_ptr) (png_structp, png_bytep, png_size_t);
+typedef void ( *png_flush_ptr) (png_structp);
+typedef void ( *png_read_status_ptr) (png_structp, png_uint_32, int)
+         ;
+typedef void ( *png_write_status_ptr) (png_structp, png_uint_32, int)
+         ;
+
+
+typedef void ( *png_progressive_info_ptr) (png_structp, png_infop);
+typedef void ( *png_progressive_end_ptr) (png_structp, png_infop);
+# 897 "./scripts/../png.h"
+typedef void ( *png_progressive_row_ptr) (png_structp, png_bytep, png_uint_32, int)
+                      ;
+
+
+
+
+typedef void ( *png_user_transform_ptr) (png_structp, png_row_infop, png_bytep)
+               ;
+
+
+
+typedef int ( *png_user_chunk_ptr) (png_structp, png_unknown_chunkp)
+                        ;
+
+
+typedef void ( *png_unknown_chunk_ptr) (png_structp);
+# 927 "./scripts/../png.h"
+typedef void ( *png_longjmp_ptr) (jmp_buf, int);
+# 964 "./scripts/../png.h"
+typedef png_voidp ( *png_malloc_ptr) (png_structp, png_alloc_size_t)
+                      ;
+typedef void ( *png_free_ptr) (png_structp, png_voidp);
+
+typedef png_struct * * png_structpp;
+# 1000 "./scripts/../png.h"
+PNG_DFN "@" png_access_version_number "@ @@" 1 "@";
+
+
+
+
+PNG_DFN "@" png_set_sig_bytes "@ @@" 2 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_sig_cmp "@ @@" 3 "@"
+                             ;
+
+
+
+
+
+
+
+PNG_DFN "@" png_create_read_struct "@ @@" 4 "@"
+
+
+                  ;
+
+
+PNG_DFN "@" png_create_write_struct "@ @@" 5 "@"
+
+
+                  ;
+
+PNG_DFN "@" png_get_compression_buffer_size "@ @@" 6 "@"
+                                ;
+
+PNG_DFN "@" png_set_compression_buffer_size "@ @@" 7 "@"
+                     ;
+# 1049 "./scripts/../png.h"
+PNG_DFN "@" png_set_longjmp_fn "@ @@" 8 "@"
+                                                     ;
+# 1062 "./scripts/../png.h"
+PNG_DFN "@" png_longjmp "@ @@" 9 "@"
+                 ;
+
+
+
+PNG_DFN "@" png_reset_zstream "@ @@" 10 "@";
+
+
+
+
+PNG_DFN "@" png_create_read_struct_2 "@ @@" 11 "@"
+
+
+
+                  ;
+PNG_DFN "@" png_create_write_struct_2 "@ @@" 12 "@"
+
+
+
+                  ;
+
+
+
+PNG_DFN "@" png_write_sig "@ @@" 13 "@";
+
+
+PNG_DFN "@" png_write_chunk "@ @@" 14 "@"
+                                                         ;
+
+
+PNG_DFN "@" png_write_chunk_start "@ @@" 15 "@"
+                                                    ;
+
+
+PNG_DFN "@" png_write_chunk_data "@ @@" 16 "@"
+                                             ;
+
+
+PNG_DFN "@" png_write_chunk_end "@ @@" 17 "@";
+
+
+PNG_DFN "@" png_create_info_struct "@ @@" 18 "@"
+                  ;
+
+PNG_DFN "@" png_info_init_3 "@ @@" 19 "@"
+                                     ;
+
+
+PNG_DFN "@" png_write_info_before_PLTE "@ @@" 20 "@"
+                                              ;
+PNG_DFN "@" png_write_info "@ @@" 21 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_info "@ @@" 22 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_convert_to_rfc1123 "@ @@" 23 "@"
+
+                           ;
+
+
+
+
+PNG_DFN "@" png_convert_from_struct_tm "@ @@" 24 "@"
+                                     ;
+
+
+PNG_DFN "@" png_convert_from_time_t "@ @@" 25 "@"
+                                    ;
+
+
+
+
+PNG_DFN "@" png_set_expand "@ @@" 26 "@";
+PNG_DFN "@" png_set_expand_gray_1_2_4_to_8 "@ @@" 27 "@";
+PNG_DFN "@" png_set_palette_to_rgb "@ @@" 28 "@";
+PNG_DFN "@" png_set_tRNS_to_alpha "@ @@" 29 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_expand_16 "@ @@" 221 "@";
+
+
+
+
+PNG_DFN "@" png_set_bgr "@ @@" 30 "@";
+
+
+
+
+PNG_DFN "@" png_set_gray_to_rgb "@ @@" 31 "@";
+# 1169 "./scripts/../png.h"
+PNG_DFN "@" png_set_rgb_to_gray "@ @@" 32 "@";
+
+PNG_DFN "@" png_set_rgb_to_gray_fixed "@ @@" 33 "@";
+
+
+PNG_DFN "@" png_get_rgb_to_gray_status "@ @@" 34 "@"
+             ;
+
+
+
+PNG_DFN "@" png_build_grayscale_palette "@ @@" 35 "@"
+                        ;
+# 1239 "./scripts/../png.h"
+PNG_DFN "@" png_set_alpha_mode "@ @@" 227 "@";
+
+PNG_DFN "@" png_set_alpha_mode_fixed "@ @@" 228 "@";
+# 1393 "./scripts/../png.h"
+PNG_DFN "@" png_set_strip_alpha "@ @@" 36 "@";
+
+
+
+
+PNG_DFN "@" png_set_swap_alpha "@ @@" 37 "@";
+
+
+
+
+PNG_DFN "@" png_set_invert_alpha "@ @@" 38 "@";
+
+
+
+
+PNG_DFN "@" png_set_filler "@ @@" 39 "@"
+               ;
+
+
+
+
+PNG_DFN "@" png_set_add_alpha "@ @@" 40 "@"
+
+               ;
+
+
+
+
+PNG_DFN "@" png_set_swap "@ @@" 41 "@";
+
+
+
+
+PNG_DFN "@" png_set_packing "@ @@" 42 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_packswap "@ @@" 43 "@";
+
+
+
+
+PNG_DFN "@" png_set_shift "@ @@" 44 "@"
+               ;
+# 1449 "./scripts/../png.h"
+PNG_DFN "@" png_set_interlace_handling "@ @@" 45 "@";
+
+
+
+
+PNG_DFN "@" png_set_invert_mono "@ @@" 46 "@";
+# 1463 "./scripts/../png.h"
+PNG_DFN "@" png_set_background "@ @@" 47 "@";
+
+
+PNG_DFN "@" png_set_background_fixed "@ @@" 215 "@";
+# 1479 "./scripts/../png.h"
+PNG_DFN "@" png_set_scale_16 "@ @@" 229 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_strip_16 "@ @@" 48 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_quantize "@ @@" 49 "@"
+
+
+                       ;
+# 1515 "./scripts/../png.h"
+PNG_DFN "@" png_set_gamma "@ @@" 50 "@";
+
+
+PNG_DFN "@" png_set_gamma_fixed "@ @@" 208 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_flush "@ @@" 51 "@";
+
+PNG_DFN "@" png_write_flush "@ @@" 52 "@";
+
+
+
+PNG_DFN "@" png_start_read_image "@ @@" 53 "@";
+
+
+PNG_DFN "@" png_read_update_info "@ @@" 54 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_rows "@ @@" 55 "@"
+                                                  ;
+
+
+
+
+PNG_DFN "@" png_read_row "@ @@" 56 "@"
+                           ;
+
+
+
+
+PNG_DFN "@" png_read_image "@ @@" 57 "@";
+
+
+
+PNG_DFN "@" png_write_row "@ @@" 58 "@"
+                                               ;
+
+
+
+
+
+
+PNG_DFN "@" png_write_rows "@ @@" 59 "@"
+                          ;
+
+
+PNG_DFN "@" png_write_image "@ @@" 60 "@"
+                                            ;
+
+
+PNG_DFN "@" png_write_end "@ @@" 61 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_end "@ @@" 62 "@";
+
+
+
+PNG_DFN "@" png_destroy_info_struct "@ @@" 63 "@"
+                             ;
+
+
+PNG_DFN "@" png_destroy_read_struct "@ @@" 64 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_destroy_write_struct "@ @@" 65 "@"
+                             ;
+
+
+PNG_DFN "@" png_set_crc_action "@ @@" 66 "@"
+                                                             ;
+# 1621 "./scripts/../png.h"
+PNG_DFN "@" png_set_filter "@ @@" 67 "@"
+                                                   ;
+# 1677 "./scripts/../png.h"
+PNG_DFN "@" png_set_filter_heuristics "@ @@" 68 "@";
+
+
+PNG_DFN "@" png_set_filter_heuristics_fixed "@ @@" 209 "@";
+# 1702 "./scripts/../png.h"
+PNG_DFN "@" png_set_compression_level "@ @@" 69 "@"
+                                     ;
+
+PNG_DFN "@" png_set_compression_mem_level "@ @@" 70 "@"
+                   ;
+
+PNG_DFN "@" png_set_compression_strategy "@ @@" 71 "@"
+                  ;
+
+
+
+
+PNG_DFN "@" png_set_compression_window_bits "@ @@" 72 "@"
+                     ;
+
+PNG_DFN "@" png_set_compression_method "@ @@" 73 "@"
+                ;
+
+
+
+
+PNG_DFN "@" png_set_text_compression_level "@ @@" 222 "@"
+                                     ;
+
+PNG_DFN "@" png_set_text_compression_mem_level "@ @@" 223 "@"
+                   ;
+
+PNG_DFN "@" png_set_text_compression_strategy "@ @@" 224 "@"
+                  ;
+
+
+
+
+PNG_DFN "@" png_set_text_compression_window_bits "@ @@" 225 "@"
+                              ;
+
+PNG_DFN "@" png_set_text_compression_method "@ @@" 226 "@"
+                ;
+# 1753 "./scripts/../png.h"
+PNG_DFN "@" png_init_io "@ @@" 74 "@";
+# 1764 "./scripts/../png.h"
+PNG_DFN "@" png_set_error_fn "@ @@" 75 "@"
+
+                                                      ;
+
+
+PNG_DFN "@" png_get_error_ptr "@ @@" 76 "@";
+# 1781 "./scripts/../png.h"
+PNG_DFN "@" png_set_write_fn "@ @@" 77 "@"
+                                                             ;
+
+
+PNG_DFN "@" png_set_read_fn "@ @@" 78 "@"
+                             ;
+
+
+PNG_DFN "@" png_get_io_ptr "@ @@" 79 "@";
+
+PNG_DFN "@" png_set_read_status_fn "@ @@" 80 "@"
+                                     ;
+
+PNG_DFN "@" png_set_write_status_fn "@ @@" 81 "@"
+                                       ;
+
+
+
+PNG_DFN "@" png_set_mem_fn "@ @@" 82 "@"
+                                                    ;
+
+PNG_DFN "@" png_get_mem_ptr "@ @@" 83 "@";
+
+
+
+PNG_DFN "@" png_set_read_user_transform_fn "@ @@" 84 "@"
+                                                   ;
+
+
+
+PNG_DFN "@" png_set_write_user_transform_fn "@ @@" 85 "@"
+                                                    ;
+
+
+
+PNG_DFN "@" png_set_user_transform_info "@ @@" 86 "@"
+
+                                 ;
+
+PNG_DFN "@" png_get_user_transform_ptr "@ @@" 87 "@"
+                                ;
+# 1836 "./scripts/../png.h"
+PNG_DFN "@" png_get_current_row_number "@ @@" 217 "@";
+PNG_DFN "@" png_get_current_pass_number "@ @@" 218 "@";
+
+
+
+PNG_DFN "@" png_set_read_user_chunk_fn "@ @@" 88 "@"
+                                                                     ;
+PNG_DFN "@" png_get_user_chunk_ptr "@ @@" 89 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_progressive_read_fn "@ @@" 90 "@"
+
+                                                                    ;
+
+
+PNG_DFN "@" png_get_progressive_ptr "@ @@" 91 "@";
+
+
+PNG_DFN "@" png_process_data "@ @@" 92 "@"
+
+                                              ;
+# 1869 "./scripts/../png.h"
+PNG_DFN "@" png_process_data_pause "@ @@" 219 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_process_data_skip "@ @@" 220 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_progressive_combine_row "@ @@" 93 "@"
+                                                ;
+
+
+
+PNG_DFN "@" png_malloc "@ @@" 94 "@"
+
+                  ;
+
+PNG_DFN "@" png_calloc "@ @@" 95 "@"
+
+                  ;
+
+
+PNG_DFN "@" png_malloc_warn "@ @@" 96 "@"
+                                          ;
+
+
+PNG_DFN "@" png_free "@ @@" 97 "@";
+
+
+PNG_DFN "@" png_free_data "@ @@" 98 "@"
+                                                                            ;
+
+
+
+PNG_DFN "@" png_data_freer "@ @@" 99 "@"
+                                                                           ;
+# 1934 "./scripts/../png.h"
+PNG_DFN "@" png_malloc_default "@ @@" 100 "@"
+                                          ;
+PNG_DFN "@" png_free_default "@ @@" 101 "@";
+
+
+
+
+PNG_DFN "@" png_error "@ @@" 102 "@"
+
+                 ;
+
+
+PNG_DFN "@" png_chunk_error "@ @@" 103 "@"
+                                                 ;
+# 1956 "./scripts/../png.h"
+PNG_DFN "@" png_warning "@ @@" 105 "@"
+                                     ;
+
+
+PNG_DFN "@" png_chunk_warning "@ @@" 106 "@"
+                                     ;
+
+
+
+
+
+
+PNG_DFN "@" png_benign_error "@ @@" 107 "@"
+                                     ;
+
+
+
+PNG_DFN "@" png_chunk_benign_error "@ @@" 108 "@"
+                                     ;
+
+PNG_DFN "@" png_set_benign_errors "@ @@" 109 "@"
+                                       ;
+# 2001 "./scripts/../png.h"
+PNG_DFN "@" png_get_valid "@ @@" 110 "@"
+
+                      ;
+
+
+PNG_DFN "@" png_get_rowbytes "@ @@" 111 "@"
+                              ;
+
+
+
+
+
+PNG_DFN "@" png_get_rows "@ @@" 112 "@"
+                                                          ;
+
+
+
+PNG_DFN "@" png_set_rows "@ @@" 113 "@"
+                                                 ;
+
+
+
+PNG_DFN "@" png_get_channels "@ @@" 114 "@"
+                                                          ;
+
+
+
+PNG_DFN "@" png_get_image_width "@ @@" 115 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_image_height "@ @@" 116 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_bit_depth "@ @@" 117 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_get_color_type "@ @@" 118 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_filter_type "@ @@" 119 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_interlace_type "@ @@" 120 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_compression_type "@ @@" 121 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_pixels_per_meter "@ @@" 122 "@"
+                                                          ;
+PNG_DFN "@" png_get_x_pixels_per_meter "@ @@" 123 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_pixels_per_meter "@ @@" 124 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_get_pixel_aspect_ratio "@ @@" 125 "@";
+
+PNG_DFN "@" png_get_pixel_aspect_ratio_fixed "@ @@" 210 "@";
+
+
+
+PNG_DFN "@" png_get_x_offset_pixels "@ @@" 126 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_offset_pixels "@ @@" 127 "@"
+                                                          ;
+PNG_DFN "@" png_get_x_offset_microns "@ @@" 128 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_offset_microns "@ @@" 129 "@"
+                                                          ;
+
+
+
+
+PNG_DFN "@" png_get_signature "@ @@" 130 "@"
+                                                    ;
+
+
+PNG_DFN "@" png_get_bKGD "@ @@" 131 "@"
+
+                               ;
+
+
+
+PNG_DFN "@" png_set_bKGD "@ @@" 132 "@"
+                                    ;
+
+
+
+PNG_DFN "@" png_get_cHRM "@ @@" 133 "@";
+
+
+
+PNG_DFN "@" png_get_cHRM_XYZ "@ @@" 230 "@";
+
+
+
+
+PNG_DFN "@" png_get_cHRM_fixed "@ @@" 134 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_get_cHRM_XYZ_fixed "@ @@" 231 "@";
+# 2124 "./scripts/../png.h"
+PNG_DFN "@" png_set_cHRM "@ @@" 135 "@";
+
+
+
+PNG_DFN "@" png_set_cHRM_XYZ "@ @@" 232 "@";
+
+
+
+PNG_DFN "@" png_set_cHRM_fixed "@ @@" 136 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_cHRM_XYZ_fixed "@ @@" 233 "@";
+# 2147 "./scripts/../png.h"
+PNG_DFN "@" png_get_gAMA "@ @@" 137 "@";
+
+
+PNG_DFN "@" png_get_gAMA_fixed "@ @@" 138 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_gAMA "@ @@" 139 "@";
+
+PNG_DFN "@" png_set_gAMA_fixed "@ @@" 140 "@";
+
+
+
+
+PNG_DFN "@" png_get_hIST "@ @@" 141 "@"
+
+                        ;
+
+
+
+PNG_DFN "@" png_set_hIST "@ @@" 142 "@"
+                                                 ;
+
+
+PNG_DFN "@" png_get_IHDR "@ @@" 143 "@"
+
+
+                                                                        ;
+
+PNG_DFN "@" png_set_IHDR "@ @@" 144 "@"
+
+
+                                                                     ;
+
+
+PNG_DFN "@" png_get_oFFs "@ @@" 145 "@"
+
+                                                                ;
+
+
+
+PNG_DFN "@" png_set_oFFs "@ @@" 146 "@"
+
+                                                             ;
+
+
+
+PNG_DFN "@" png_get_pCAL "@ @@" 147 "@"
+
+
+
+                                          ;
+
+
+
+PNG_DFN "@" png_set_pCAL "@ @@" 148 "@"
+
+
+                                                           ;
+
+
+
+PNG_DFN "@" png_get_pHYs "@ @@" 149 "@"
+
+                                                            ;
+
+
+
+PNG_DFN "@" png_set_pHYs "@ @@" 150 "@"
+
+                                                         ;
+
+
+PNG_DFN "@" png_get_PLTE "@ @@" 151 "@"
+
+                                           ;
+
+PNG_DFN "@" png_set_PLTE "@ @@" 152 "@"
+
+                                               ;
+
+
+PNG_DFN "@" png_get_sBIT "@ @@" 153 "@"
+
+                           ;
+
+
+
+PNG_DFN "@" png_set_sBIT "@ @@" 154 "@"
+                                                                          ;
+
+
+
+PNG_DFN "@" png_get_sRGB "@ @@" 155 "@"
+                                                     ;
+
+
+
+PNG_DFN "@" png_set_sRGB "@ @@" 156 "@"
+                                                               ;
+PNG_DFN "@" png_set_sRGB_gAMA_and_cHRM "@ @@" 157 "@"
+                                         ;
+
+
+
+PNG_DFN "@" png_get_iCCP "@ @@" 158 "@"
+
+
+                          ;
+
+
+
+PNG_DFN "@" png_set_iCCP "@ @@" 159 "@"
+
+
+                         ;
+
+
+
+PNG_DFN "@" png_get_sPLT "@ @@" 160 "@"
+
+                          ;
+
+
+
+PNG_DFN "@" png_set_sPLT "@ @@" 161 "@"
+
+                                             ;
+
+
+
+
+PNG_DFN "@" png_get_text "@ @@" 162 "@"
+
+                                        ;
+# 2294 "./scripts/../png.h"
+PNG_DFN "@" png_set_text "@ @@" 163 "@"
+
+                                            ;
+
+
+
+PNG_DFN "@" png_get_tIME "@ @@" 164 "@"
+                                                                         ;
+
+
+
+PNG_DFN "@" png_set_tIME "@ @@" 165 "@"
+                                                                        ;
+
+
+
+PNG_DFN "@" png_get_tRNS "@ @@" 166 "@"
+
+                                                                        ;
+
+
+
+PNG_DFN "@" png_set_tRNS "@ @@" 167 "@"
+
+
+                                     ;
+
+
+
+PNG_DFN "@" png_get_sCAL "@ @@" 168 "@";
+# 2332 "./scripts/../png.h"
+PNG_DFN "@" png_get_sCAL_fixed "@ @@" 214 "@";
+
+
+
+
+PNG_DFN "@" png_get_sCAL_s "@ @@" 169 "@"
+
+                                                      ;
+
+PNG_DFN "@" png_set_sCAL "@ @@" 170 "@";
+
+
+PNG_DFN "@" png_set_sCAL_fixed "@ @@" 213 "@";
+
+
+PNG_DFN "@" png_set_sCAL_s "@ @@" 171 "@"
+
+                                                               ;
+# 2364 "./scripts/../png.h"
+PNG_DFN "@" png_set_keep_unknown_chunks "@ @@" 172 "@"
+
+                                                ;
+
+
+
+
+PNG_DFN "@" png_handle_as_unknown "@ @@" 173 "@"
+                                ;
+
+
+PNG_DFN "@" png_set_unknown_chunks "@ @@" 174 "@"
+
+                      ;
+PNG_DFN "@" png_set_unknown_chunk_location "@ @@" 175 "@"
+                                                                       ;
+PNG_DFN "@" png_get_unknown_chunks "@ @@" 176 "@"
+                                                           ;
+
+
+
+
+
+
+PNG_DFN "@" png_set_invalid "@ @@" 177 "@"
+                                                        ;
+
+
+
+PNG_DFN "@" png_read_png "@ @@" 178 "@"
+                                      ;
+PNG_DFN "@" png_write_png "@ @@" 179 "@"
+                                      ;
+
+
+PNG_DFN "@" png_get_copyright "@ @@" 180 "@"
+                                ;
+PNG_DFN "@" png_get_header_ver "@ @@" 181 "@"
+                                ;
+PNG_DFN "@" png_get_header_version "@ @@" 182 "@"
+                                ;
+PNG_DFN "@" png_get_libpng_ver "@ @@" 183 "@"
+                                ;
+
+
+PNG_DFN "@" png_permit_mng_features "@ @@" 184 "@"
+                                        ;
+# 2423 "./scripts/../png.h"
+PNG_DFN "@" png_set_strip_error_numbers "@ @@" 185 "@"
+
+                            ;
+
+
+
+
+PNG_DFN "@" png_set_user_limits "@ @@" 186 "@"
+                                                             ;
+PNG_DFN "@" png_get_user_width_max "@ @@" 187 "@"
+                                ;
+PNG_DFN "@" png_get_user_height_max "@ @@" 188 "@"
+                                ;
+
+PNG_DFN "@" png_set_chunk_cache_max "@ @@" 189 "@"
+                                      ;
+PNG_DFN "@" png_get_chunk_cache_max "@ @@" 190 "@"
+                                ;
+
+PNG_DFN "@" png_set_chunk_malloc_max "@ @@" 191 "@"
+                                           ;
+PNG_DFN "@" png_get_chunk_malloc_max "@ @@" 192 "@"
+                                ;
+
+
+
+PNG_DFN "@" png_get_pixels_per_inch "@ @@" 193 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_x_pixels_per_inch "@ @@" 194 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_y_pixels_per_inch "@ @@" 195 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_x_offset_inches "@ @@" 196 "@";
+
+
+PNG_DFN "@" png_get_x_offset_inches_fixed "@ @@" 211 "@";
+
+
+
+PNG_DFN "@" png_get_y_offset_inches "@ @@" 197 "@";
+
+
+PNG_DFN "@" png_get_y_offset_inches_fixed "@ @@" 212 "@";
+
+
+
+
+PNG_DFN "@" png_get_pHYs_dpi "@ @@" 198 "@"
+
+                    ;
+
+
+
+
+
+PNG_DFN "@" png_get_io_state "@ @@" 199 "@";
+
+PNG_DFN "@" png_get_io_chunk_name "@ @@" 200 "@"
+                                          ;
+PNG_DFN "@" png_get_io_chunk_type "@ @@" 216 "@"
+                                ;
+# 2605 "./scripts/../png.h"
+PNG_DFN "@" png_get_uint_32 "@ @@" 201 "@";
+PNG_DFN "@" png_get_uint_16 "@ @@" 202 "@";
+PNG_DFN "@" png_get_int_32 "@ @@" 203 "@";
+
+
+PNG_DFN "@" png_get_uint_31 "@ @@" 204 "@"
+                         ;
+
+
+
+
+PNG_DFN "@" png_save_uint_32 "@ @@" 205 "@";
+
+
+PNG_DFN "@" png_save_int_32 "@ @@" 206 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_save_uint_16 "@ @@" 207 "@";
+# 2657 "./scripts/../png.h"
+PNG_DFN "@" png_set_check_for_invalid_index "@ @@" 234 "@"
+                 ;
+
+PNG_DFN "@" png_get_palette_max "@ @@" 235 "@"
+                              ;
+# 2698 "./scripts/../png.h"
+PNG_DFN "@" png_set_option "@ @@" 236 "@"
+              ;
+# 2715 "./scripts/../png.h"
+  PNG_DFN "; @@" 236 "@";
+# 49 "./scripts/symbols.dfn" 2
+# 58 "./scripts/symbols.dfn"
+# 1 "./scripts/../png.h" 1
+# 561 "./scripts/../png.h"
+typedef char* png_libpng_version_1_5_15;
+
+
+
+
+
+typedef struct png_color_struct
+{
+   png_byte red;
+   png_byte green;
+   png_byte blue;
+} png_color;
+typedef png_color * png_colorp;
+typedef const png_color * png_const_colorp;
+typedef png_color * * png_colorpp;
+
+typedef struct png_color_16_struct
+{
+   png_byte index;
+   png_uint_16 red;
+   png_uint_16 green;
+   png_uint_16 blue;
+   png_uint_16 gray;
+} png_color_16;
+typedef png_color_16 * png_color_16p;
+typedef const png_color_16 * png_const_color_16p;
+typedef png_color_16 * * png_color_16pp;
+
+typedef struct png_color_8_struct
+{
+   png_byte red;
+   png_byte green;
+   png_byte blue;
+   png_byte gray;
+   png_byte alpha;
+} png_color_8;
+typedef png_color_8 * png_color_8p;
+typedef const png_color_8 * png_const_color_8p;
+typedef png_color_8 * * png_color_8pp;
+
+
+
+
+
+typedef struct png_sPLT_entry_struct
+{
+   png_uint_16 red;
+   png_uint_16 green;
+   png_uint_16 blue;
+   png_uint_16 alpha;
+   png_uint_16 frequency;
+} png_sPLT_entry;
+typedef png_sPLT_entry * png_sPLT_entryp;
+typedef const png_sPLT_entry * png_const_sPLT_entryp;
+typedef png_sPLT_entry * * png_sPLT_entrypp;
+
+
+
+
+
+
+typedef struct png_sPLT_struct
+{
+   png_charp name;
+   png_byte depth;
+   png_sPLT_entryp entries;
+   png_int_32 nentries;
+} png_sPLT_t;
+typedef png_sPLT_t * png_sPLT_tp;
+typedef const png_sPLT_t * png_const_sPLT_tp;
+typedef png_sPLT_t * * png_sPLT_tpp;
+# 651 "./scripts/../png.h"
+typedef struct png_text_struct
+{
+   int compression;
+
+
+
+
+   png_charp key;
+   png_charp text;
+
+   png_size_t text_length;
+   png_size_t itxt_length;
+   png_charp lang;
+
+   png_charp lang_key;
+
+} png_text;
+typedef png_text * png_textp;
+typedef const png_text * png_const_textp;
+typedef png_text * * png_textpp;
+# 689 "./scripts/../png.h"
+typedef struct png_time_struct
+{
+   png_uint_16 year;
+   png_byte month;
+   png_byte day;
+   png_byte hour;
+   png_byte minute;
+   png_byte second;
+} png_time;
+typedef png_time * png_timep;
+typedef const png_time * png_const_timep;
+typedef png_time * * png_timepp;
+# 709 "./scripts/../png.h"
+typedef struct png_unknown_chunk_t
+{
+    png_byte name[5];
+    png_byte *data;
+    png_size_t size;
+
+
+    png_byte location;
+}
+
+
+png_unknown_chunk;
+typedef png_unknown_chunk * png_unknown_chunkp;
+typedef const png_unknown_chunk * png_const_unknown_chunkp;
+typedef png_unknown_chunk * * png_unknown_chunkpp;
+# 736 "./scripts/../png.h"
+typedef struct png_info_def png_info;
+typedef png_info * png_infop;
+typedef const png_info * png_const_infop;
+typedef png_info * * png_infopp;
+# 846 "./scripts/../png.h"
+typedef struct png_row_info_struct
+{
+   png_uint_32 width;
+   png_size_t rowbytes;
+   png_byte color_type;
+   png_byte bit_depth;
+   png_byte channels;
+   png_byte pixel_depth;
+} png_row_info;
+
+typedef png_row_info * png_row_infop;
+typedef png_row_info * * png_row_infopp;
+
+
+
+
+
+typedef struct png_struct_def png_struct;
+typedef const png_struct * png_const_structp;
+typedef png_struct * png_structp;
+# 875 "./scripts/../png.h"
+typedef void ( *png_error_ptr) (png_structp, png_const_charp);
+typedef void ( *png_rw_ptr) (png_structp, png_bytep, png_size_t);
+typedef void ( *png_flush_ptr) (png_structp);
+typedef void ( *png_read_status_ptr) (png_structp, png_uint_32, int)
+         ;
+typedef void ( *png_write_status_ptr) (png_structp, png_uint_32, int)
+         ;
+
+
+typedef void ( *png_progressive_info_ptr) (png_structp, png_infop);
+typedef void ( *png_progressive_end_ptr) (png_structp, png_infop);
+# 897 "./scripts/../png.h"
+typedef void ( *png_progressive_row_ptr) (png_structp, png_bytep, png_uint_32, int)
+                      ;
+
+
+
+
+typedef void ( *png_user_transform_ptr) (png_structp, png_row_infop, png_bytep)
+               ;
+
+
+
+typedef int ( *png_user_chunk_ptr) (png_structp, png_unknown_chunkp)
+                        ;
+
+
+typedef void ( *png_unknown_chunk_ptr) (png_structp);
+# 927 "./scripts/../png.h"
+typedef void ( *png_longjmp_ptr) (jmp_buf, int);
+# 964 "./scripts/../png.h"
+typedef png_voidp ( *png_malloc_ptr) (png_structp, png_alloc_size_t)
+                      ;
+typedef void ( *png_free_ptr) (png_structp, png_voidp);
+
+typedef png_struct * * png_structpp;
+# 1000 "./scripts/../png.h"
+PNG_DFN "@" png_access_version_number "@ @@" 1 "@";
+
+
+
+
+PNG_DFN "@" png_set_sig_bytes "@ @@" 2 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_sig_cmp "@ @@" 3 "@"
+                             ;
+
+
+
+
+
+
+
+PNG_DFN "@" png_create_read_struct "@ @@" 4 "@"
+
+
+                  ;
+
+
+PNG_DFN "@" png_create_write_struct "@ @@" 5 "@"
+
+
+                  ;
+
+PNG_DFN "@" png_get_compression_buffer_size "@ @@" 6 "@"
+                                ;
+
+PNG_DFN "@" png_set_compression_buffer_size "@ @@" 7 "@"
+                     ;
+# 1049 "./scripts/../png.h"
+PNG_DFN "@" png_set_longjmp_fn "@ @@" 8 "@"
+                                                     ;
+# 1062 "./scripts/../png.h"
+PNG_DFN "@" png_longjmp "@ @@" 9 "@"
+                 ;
+
+
+
+PNG_DFN "@" png_reset_zstream "@ @@" 10 "@";
+
+
+
+
+PNG_DFN "@" png_create_read_struct_2 "@ @@" 11 "@"
+
+
+
+                  ;
+PNG_DFN "@" png_create_write_struct_2 "@ @@" 12 "@"
+
+
+
+                  ;
+
+
+
+PNG_DFN "@" png_write_sig "@ @@" 13 "@";
+
+
+PNG_DFN "@" png_write_chunk "@ @@" 14 "@"
+                                                         ;
+
+
+PNG_DFN "@" png_write_chunk_start "@ @@" 15 "@"
+                                                    ;
+
+
+PNG_DFN "@" png_write_chunk_data "@ @@" 16 "@"
+                                             ;
+
+
+PNG_DFN "@" png_write_chunk_end "@ @@" 17 "@";
+
+
+PNG_DFN "@" png_create_info_struct "@ @@" 18 "@"
+                  ;
+
+PNG_DFN "@" png_info_init_3 "@ @@" 19 "@"
+                                     ;
+
+
+PNG_DFN "@" png_write_info_before_PLTE "@ @@" 20 "@"
+                                              ;
+PNG_DFN "@" png_write_info "@ @@" 21 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_info "@ @@" 22 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_convert_to_rfc1123 "@ @@" 23 "@"
+
+                           ;
+
+
+
+
+PNG_DFN "@" png_convert_from_struct_tm "@ @@" 24 "@"
+                                     ;
+
+
+PNG_DFN "@" png_convert_from_time_t "@ @@" 25 "@"
+                                    ;
+
+
+
+
+PNG_DFN "@" png_set_expand "@ @@" 26 "@";
+PNG_DFN "@" png_set_expand_gray_1_2_4_to_8 "@ @@" 27 "@";
+PNG_DFN "@" png_set_palette_to_rgb "@ @@" 28 "@";
+PNG_DFN "@" png_set_tRNS_to_alpha "@ @@" 29 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_expand_16 "@ @@" 221 "@";
+
+
+
+
+PNG_DFN "@" png_set_bgr "@ @@" 30 "@";
+
+
+
+
+PNG_DFN "@" png_set_gray_to_rgb "@ @@" 31 "@";
+# 1169 "./scripts/../png.h"
+PNG_DFN "@" png_set_rgb_to_gray "@ @@" 32 "@";
+
+PNG_DFN "@" png_set_rgb_to_gray_fixed "@ @@" 33 "@";
+
+
+PNG_DFN "@" png_get_rgb_to_gray_status "@ @@" 34 "@"
+             ;
+
+
+
+PNG_DFN "@" png_build_grayscale_palette "@ @@" 35 "@"
+                        ;
+# 1239 "./scripts/../png.h"
+PNG_DFN "@" png_set_alpha_mode "@ @@" 227 "@";
+
+PNG_DFN "@" png_set_alpha_mode_fixed "@ @@" 228 "@";
+# 1393 "./scripts/../png.h"
+PNG_DFN "@" png_set_strip_alpha "@ @@" 36 "@";
+
+
+
+
+PNG_DFN "@" png_set_swap_alpha "@ @@" 37 "@";
+
+
+
+
+PNG_DFN "@" png_set_invert_alpha "@ @@" 38 "@";
+
+
+
+
+PNG_DFN "@" png_set_filler "@ @@" 39 "@"
+               ;
+
+
+
+
+PNG_DFN "@" png_set_add_alpha "@ @@" 40 "@"
+
+               ;
+
+
+
+
+PNG_DFN "@" png_set_swap "@ @@" 41 "@";
+
+
+
+
+PNG_DFN "@" png_set_packing "@ @@" 42 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_packswap "@ @@" 43 "@";
+
+
+
+
+PNG_DFN "@" png_set_shift "@ @@" 44 "@"
+               ;
+# 1449 "./scripts/../png.h"
+PNG_DFN "@" png_set_interlace_handling "@ @@" 45 "@";
+
+
+
+
+PNG_DFN "@" png_set_invert_mono "@ @@" 46 "@";
+# 1463 "./scripts/../png.h"
+PNG_DFN "@" png_set_background "@ @@" 47 "@";
+
+
+PNG_DFN "@" png_set_background_fixed "@ @@" 215 "@";
+# 1479 "./scripts/../png.h"
+PNG_DFN "@" png_set_scale_16 "@ @@" 229 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_strip_16 "@ @@" 48 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_quantize "@ @@" 49 "@"
+
+
+                       ;
+# 1515 "./scripts/../png.h"
+PNG_DFN "@" png_set_gamma "@ @@" 50 "@";
+
+
+PNG_DFN "@" png_set_gamma_fixed "@ @@" 208 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_flush "@ @@" 51 "@";
+
+PNG_DFN "@" png_write_flush "@ @@" 52 "@";
+
+
+
+PNG_DFN "@" png_start_read_image "@ @@" 53 "@";
+
+
+PNG_DFN "@" png_read_update_info "@ @@" 54 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_rows "@ @@" 55 "@"
+                                                  ;
+
+
+
+
+PNG_DFN "@" png_read_row "@ @@" 56 "@"
+                           ;
+
+
+
+
+PNG_DFN "@" png_read_image "@ @@" 57 "@";
+
+
+
+PNG_DFN "@" png_write_row "@ @@" 58 "@"
+                                               ;
+
+
+
+
+
+
+PNG_DFN "@" png_write_rows "@ @@" 59 "@"
+                          ;
+
+
+PNG_DFN "@" png_write_image "@ @@" 60 "@"
+                                            ;
+
+
+PNG_DFN "@" png_write_end "@ @@" 61 "@"
+                                              ;
+
+
+
+PNG_DFN "@" png_read_end "@ @@" 62 "@";
+
+
+
+PNG_DFN "@" png_destroy_info_struct "@ @@" 63 "@"
+                             ;
+
+
+PNG_DFN "@" png_destroy_read_struct "@ @@" 64 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_destroy_write_struct "@ @@" 65 "@"
+                             ;
+
+
+PNG_DFN "@" png_set_crc_action "@ @@" 66 "@"
+                                                             ;
+# 1621 "./scripts/../png.h"
+PNG_DFN "@" png_set_filter "@ @@" 67 "@"
+                                                   ;
+# 1677 "./scripts/../png.h"
+PNG_DFN "@" png_set_filter_heuristics "@ @@" 68 "@";
+
+
+PNG_DFN "@" png_set_filter_heuristics_fixed "@ @@" 209 "@";
+# 1702 "./scripts/../png.h"
+PNG_DFN "@" png_set_compression_level "@ @@" 69 "@"
+                                     ;
+
+PNG_DFN "@" png_set_compression_mem_level "@ @@" 70 "@"
+                   ;
+
+PNG_DFN "@" png_set_compression_strategy "@ @@" 71 "@"
+                  ;
+
+
+
+
+PNG_DFN "@" png_set_compression_window_bits "@ @@" 72 "@"
+                     ;
+
+PNG_DFN "@" png_set_compression_method "@ @@" 73 "@"
+                ;
+
+
+
+
+PNG_DFN "@" png_set_text_compression_level "@ @@" 222 "@"
+                                     ;
+
+PNG_DFN "@" png_set_text_compression_mem_level "@ @@" 223 "@"
+                   ;
+
+PNG_DFN "@" png_set_text_compression_strategy "@ @@" 224 "@"
+                  ;
+
+
+
+
+PNG_DFN "@" png_set_text_compression_window_bits "@ @@" 225 "@"
+                              ;
+
+PNG_DFN "@" png_set_text_compression_method "@ @@" 226 "@"
+                ;
+# 1753 "./scripts/../png.h"
+PNG_DFN "@" png_init_io "@ @@" 74 "@";
+# 1764 "./scripts/../png.h"
+PNG_DFN "@" png_set_error_fn "@ @@" 75 "@"
+
+                                                      ;
+
+
+PNG_DFN "@" png_get_error_ptr "@ @@" 76 "@";
+# 1781 "./scripts/../png.h"
+PNG_DFN "@" png_set_write_fn "@ @@" 77 "@"
+                                                             ;
+
+
+PNG_DFN "@" png_set_read_fn "@ @@" 78 "@"
+                             ;
+
+
+PNG_DFN "@" png_get_io_ptr "@ @@" 79 "@";
+
+PNG_DFN "@" png_set_read_status_fn "@ @@" 80 "@"
+                                     ;
+
+PNG_DFN "@" png_set_write_status_fn "@ @@" 81 "@"
+                                       ;
+
+
+
+PNG_DFN "@" png_set_mem_fn "@ @@" 82 "@"
+                                                    ;
+
+PNG_DFN "@" png_get_mem_ptr "@ @@" 83 "@";
+
+
+
+PNG_DFN "@" png_set_read_user_transform_fn "@ @@" 84 "@"
+                                                   ;
+
+
+
+PNG_DFN "@" png_set_write_user_transform_fn "@ @@" 85 "@"
+                                                    ;
+
+
+
+PNG_DFN "@" png_set_user_transform_info "@ @@" 86 "@"
+
+                                 ;
+
+PNG_DFN "@" png_get_user_transform_ptr "@ @@" 87 "@"
+                                ;
+# 1836 "./scripts/../png.h"
+PNG_DFN "@" png_get_current_row_number "@ @@" 217 "@";
+PNG_DFN "@" png_get_current_pass_number "@ @@" 218 "@";
+
+
+
+PNG_DFN "@" png_set_read_user_chunk_fn "@ @@" 88 "@"
+                                                                     ;
+PNG_DFN "@" png_get_user_chunk_ptr "@ @@" 89 "@";
+
+
+
+
+
+
+PNG_DFN "@" png_set_progressive_read_fn "@ @@" 90 "@"
+
+                                                                    ;
+
+
+PNG_DFN "@" png_get_progressive_ptr "@ @@" 91 "@";
+
+
+PNG_DFN "@" png_process_data "@ @@" 92 "@"
+
+                                              ;
+# 1869 "./scripts/../png.h"
+PNG_DFN "@" png_process_data_pause "@ @@" 219 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_process_data_skip "@ @@" 220 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_progressive_combine_row "@ @@" 93 "@"
+                                                ;
+
+
+
+PNG_DFN "@" png_malloc "@ @@" 94 "@"
+
+                  ;
+
+PNG_DFN "@" png_calloc "@ @@" 95 "@"
+
+                  ;
+
+
+PNG_DFN "@" png_malloc_warn "@ @@" 96 "@"
+                                          ;
+
+
+PNG_DFN "@" png_free "@ @@" 97 "@";
+
+
+PNG_DFN "@" png_free_data "@ @@" 98 "@"
+                                                                            ;
+
+
+
+PNG_DFN "@" png_data_freer "@ @@" 99 "@"
+                                                                           ;
+# 1934 "./scripts/../png.h"
+PNG_DFN "@" png_malloc_default "@ @@" 100 "@"
+                                          ;
+PNG_DFN "@" png_free_default "@ @@" 101 "@";
+# 1951 "./scripts/../png.h"
+PNG_DFN "@" png_err "@ @@" 104 "@";
+
+
+
+
+PNG_DFN "@" png_warning "@ @@" 105 "@"
+                                     ;
+
+
+PNG_DFN "@" png_chunk_warning "@ @@" 106 "@"
+                                     ;
+
+
+
+
+
+
+PNG_DFN "@" png_benign_error "@ @@" 107 "@"
+                                     ;
+
+
+
+PNG_DFN "@" png_chunk_benign_error "@ @@" 108 "@"
+                                     ;
+
+PNG_DFN "@" png_set_benign_errors "@ @@" 109 "@"
+                                       ;
+# 2001 "./scripts/../png.h"
+PNG_DFN "@" png_get_valid "@ @@" 110 "@"
+
+                      ;
+
+
+PNG_DFN "@" png_get_rowbytes "@ @@" 111 "@"
+                              ;
+
+
+
+
+
+PNG_DFN "@" png_get_rows "@ @@" 112 "@"
+                                                          ;
+
+
+
+PNG_DFN "@" png_set_rows "@ @@" 113 "@"
+                                                 ;
+
+
+
+PNG_DFN "@" png_get_channels "@ @@" 114 "@"
+                                                          ;
+
+
+
+PNG_DFN "@" png_get_image_width "@ @@" 115 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_image_height "@ @@" 116 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_bit_depth "@ @@" 117 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_get_color_type "@ @@" 118 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_filter_type "@ @@" 119 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_interlace_type "@ @@" 120 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_compression_type "@ @@" 121 "@"
+                              ;
+
+
+PNG_DFN "@" png_get_pixels_per_meter "@ @@" 122 "@"
+                                                          ;
+PNG_DFN "@" png_get_x_pixels_per_meter "@ @@" 123 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_pixels_per_meter "@ @@" 124 "@"
+                                                          ;
+
+
+PNG_DFN "@" png_get_pixel_aspect_ratio "@ @@" 125 "@";
+
+PNG_DFN "@" png_get_pixel_aspect_ratio_fixed "@ @@" 210 "@";
+
+
+
+PNG_DFN "@" png_get_x_offset_pixels "@ @@" 126 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_offset_pixels "@ @@" 127 "@"
+                                                          ;
+PNG_DFN "@" png_get_x_offset_microns "@ @@" 128 "@"
+                                                          ;
+PNG_DFN "@" png_get_y_offset_microns "@ @@" 129 "@"
+                                                          ;
+
+
+
+
+PNG_DFN "@" png_get_signature "@ @@" 130 "@"
+                                                    ;
+
+
+PNG_DFN "@" png_get_bKGD "@ @@" 131 "@"
+
+                               ;
+
+
+
+PNG_DFN "@" png_set_bKGD "@ @@" 132 "@"
+                                    ;
+
+
+
+PNG_DFN "@" png_get_cHRM "@ @@" 133 "@";
+
+
+
+PNG_DFN "@" png_get_cHRM_XYZ "@ @@" 230 "@";
+
+
+
+
+PNG_DFN "@" png_get_cHRM_fixed "@ @@" 134 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_get_cHRM_XYZ_fixed "@ @@" 231 "@";
+# 2124 "./scripts/../png.h"
+PNG_DFN "@" png_set_cHRM "@ @@" 135 "@";
+
+
+
+PNG_DFN "@" png_set_cHRM_XYZ "@ @@" 232 "@";
+
+
+
+PNG_DFN "@" png_set_cHRM_fixed "@ @@" 136 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_cHRM_XYZ_fixed "@ @@" 233 "@";
+# 2147 "./scripts/../png.h"
+PNG_DFN "@" png_get_gAMA "@ @@" 137 "@";
+
+
+PNG_DFN "@" png_get_gAMA_fixed "@ @@" 138 "@";
+
+
+
+
+
+PNG_DFN "@" png_set_gAMA "@ @@" 139 "@";
+
+PNG_DFN "@" png_set_gAMA_fixed "@ @@" 140 "@";
+
+
+
+
+PNG_DFN "@" png_get_hIST "@ @@" 141 "@"
+
+                        ;
+
+
+
+PNG_DFN "@" png_set_hIST "@ @@" 142 "@"
+                                                 ;
+
+
+PNG_DFN "@" png_get_IHDR "@ @@" 143 "@"
+
+
+                                                                        ;
+
+PNG_DFN "@" png_set_IHDR "@ @@" 144 "@"
+
+
+                                                                     ;
+
+
+PNG_DFN "@" png_get_oFFs "@ @@" 145 "@"
+
+                                                                ;
+
+
+
+PNG_DFN "@" png_set_oFFs "@ @@" 146 "@"
+
+                                                             ;
+
+
+
+PNG_DFN "@" png_get_pCAL "@ @@" 147 "@"
+
+
+
+                                          ;
+
+
+
+PNG_DFN "@" png_set_pCAL "@ @@" 148 "@"
+
+
+                                                           ;
+
+
+
+PNG_DFN "@" png_get_pHYs "@ @@" 149 "@"
+
+                                                            ;
+
+
+
+PNG_DFN "@" png_set_pHYs "@ @@" 150 "@"
+
+                                                         ;
+
+
+PNG_DFN "@" png_get_PLTE "@ @@" 151 "@"
+
+                                           ;
+
+PNG_DFN "@" png_set_PLTE "@ @@" 152 "@"
+
+                                               ;
+
+
+PNG_DFN "@" png_get_sBIT "@ @@" 153 "@"
+
+                           ;
+
+
+
+PNG_DFN "@" png_set_sBIT "@ @@" 154 "@"
+                                                                          ;
+
+
+
+PNG_DFN "@" png_get_sRGB "@ @@" 155 "@"
+                                                     ;
+
+
+
+PNG_DFN "@" png_set_sRGB "@ @@" 156 "@"
+                                                               ;
+PNG_DFN "@" png_set_sRGB_gAMA_and_cHRM "@ @@" 157 "@"
+                                         ;
+
+
+
+PNG_DFN "@" png_get_iCCP "@ @@" 158 "@"
+
+
+                          ;
+
+
+
+PNG_DFN "@" png_set_iCCP "@ @@" 159 "@"
+
+
+                         ;
+
+
+
+PNG_DFN "@" png_get_sPLT "@ @@" 160 "@"
+
+                          ;
+
+
+
+PNG_DFN "@" png_set_sPLT "@ @@" 161 "@"
+
+                                             ;
+
+
+
+
+PNG_DFN "@" png_get_text "@ @@" 162 "@"
+
+                                        ;
+# 2294 "./scripts/../png.h"
+PNG_DFN "@" png_set_text "@ @@" 163 "@"
+
+                                            ;
+
+
+
+PNG_DFN "@" png_get_tIME "@ @@" 164 "@"
+                                                                         ;
+
+
+
+PNG_DFN "@" png_set_tIME "@ @@" 165 "@"
+                                                                        ;
+
+
+
+PNG_DFN "@" png_get_tRNS "@ @@" 166 "@"
+
+                                                                        ;
+
+
+
+PNG_DFN "@" png_set_tRNS "@ @@" 167 "@"
+
+
+                                     ;
+
+
+
+PNG_DFN "@" png_get_sCAL "@ @@" 168 "@";
+# 2332 "./scripts/../png.h"
+PNG_DFN "@" png_get_sCAL_fixed "@ @@" 214 "@";
+
+
+
+
+PNG_DFN "@" png_get_sCAL_s "@ @@" 169 "@"
+
+                                                      ;
+
+PNG_DFN "@" png_set_sCAL "@ @@" 170 "@";
+
+
+PNG_DFN "@" png_set_sCAL_fixed "@ @@" 213 "@";
+
+
+PNG_DFN "@" png_set_sCAL_s "@ @@" 171 "@"
+
+                                                               ;
+# 2364 "./scripts/../png.h"
+PNG_DFN "@" png_set_keep_unknown_chunks "@ @@" 172 "@"
+
+                                                ;
+
+
+
+
+PNG_DFN "@" png_handle_as_unknown "@ @@" 173 "@"
+                                ;
+
+
+PNG_DFN "@" png_set_unknown_chunks "@ @@" 174 "@"
+
+                      ;
+PNG_DFN "@" png_set_unknown_chunk_location "@ @@" 175 "@"
+                                                                       ;
+PNG_DFN "@" png_get_unknown_chunks "@ @@" 176 "@"
+                                                           ;
+
+
+
+
+
+
+PNG_DFN "@" png_set_invalid "@ @@" 177 "@"
+                                                        ;
+
+
+
+PNG_DFN "@" png_read_png "@ @@" 178 "@"
+                                      ;
+PNG_DFN "@" png_write_png "@ @@" 179 "@"
+                                      ;
+
+
+PNG_DFN "@" png_get_copyright "@ @@" 180 "@"
+                                ;
+PNG_DFN "@" png_get_header_ver "@ @@" 181 "@"
+                                ;
+PNG_DFN "@" png_get_header_version "@ @@" 182 "@"
+                                ;
+PNG_DFN "@" png_get_libpng_ver "@ @@" 183 "@"
+                                ;
+
+
+PNG_DFN "@" png_permit_mng_features "@ @@" 184 "@"
+                                        ;
+# 2423 "./scripts/../png.h"
+PNG_DFN "@" png_set_strip_error_numbers "@ @@" 185 "@"
+
+                            ;
+
+
+
+
+PNG_DFN "@" png_set_user_limits "@ @@" 186 "@"
+                                                             ;
+PNG_DFN "@" png_get_user_width_max "@ @@" 187 "@"
+                                ;
+PNG_DFN "@" png_get_user_height_max "@ @@" 188 "@"
+                                ;
+
+PNG_DFN "@" png_set_chunk_cache_max "@ @@" 189 "@"
+                                      ;
+PNG_DFN "@" png_get_chunk_cache_max "@ @@" 190 "@"
+                                ;
+
+PNG_DFN "@" png_set_chunk_malloc_max "@ @@" 191 "@"
+                                           ;
+PNG_DFN "@" png_get_chunk_malloc_max "@ @@" 192 "@"
+                                ;
+
+
+
+PNG_DFN "@" png_get_pixels_per_inch "@ @@" 193 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_x_pixels_per_inch "@ @@" 194 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_y_pixels_per_inch "@ @@" 195 "@"
+                                                          ;
+
+PNG_DFN "@" png_get_x_offset_inches "@ @@" 196 "@";
+
+
+PNG_DFN "@" png_get_x_offset_inches_fixed "@ @@" 211 "@";
+
+
+
+PNG_DFN "@" png_get_y_offset_inches "@ @@" 197 "@";
+
+
+PNG_DFN "@" png_get_y_offset_inches_fixed "@ @@" 212 "@";
+
+
+
+
+PNG_DFN "@" png_get_pHYs_dpi "@ @@" 198 "@"
+
+                    ;
+
+
+
+
+
+PNG_DFN "@" png_get_io_state "@ @@" 199 "@";
+
+PNG_DFN "@" png_get_io_chunk_name "@ @@" 200 "@"
+                                          ;
+PNG_DFN "@" png_get_io_chunk_type "@ @@" 216 "@"
+                                ;
+# 2605 "./scripts/../png.h"
+PNG_DFN "@" png_get_uint_32 "@ @@" 201 "@";
+PNG_DFN "@" png_get_uint_16 "@ @@" 202 "@";
+PNG_DFN "@" png_get_int_32 "@ @@" 203 "@";
+
+
+PNG_DFN "@" png_get_uint_31 "@ @@" 204 "@"
+                         ;
+
+
+
+
+PNG_DFN "@" png_save_uint_32 "@ @@" 205 "@";
+
+
+PNG_DFN "@" png_save_int_32 "@ @@" 206 "@";
+
+
+
+
+
+
+
+PNG_DFN "@" png_save_uint_16 "@ @@" 207 "@";
+# 2657 "./scripts/../png.h"
+PNG_DFN "@" png_set_check_for_invalid_index "@ @@" 234 "@"
+                 ;
+
+PNG_DFN "@" png_get_palette_max "@ @@" 235 "@"
+                              ;
+# 2698 "./scripts/../png.h"
+PNG_DFN "@" png_set_option "@ @@" 236 "@"
+              ;
+# 2715 "./scripts/../png.h"
+  PNG_DFN "; @@" 236 "@";
+# 59 "./scripts/symbols.dfn" 2
+# 2 "scripts/symbols.out.c" 2

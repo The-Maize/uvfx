@@ -1,0 +1,28 @@
+/*
+    The following will download it from source forge, but you can extract my copy and skip that part if ytou already have it, just modify
+    the process to the 3rd instruction and skip the first two.
+*/
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+cd /tmp
+
+wget https://sourceforge.net/projects/libpng/files/libpng15/older-releases/1.5.15/libpng-1.5.15.tar.gz
+
+tar -zxvf ./libpng-1.5.15.tar.gz
+
+cd libpng-1.5.15
+
+./configure --prefix=/usr/local/libpng
+
+make check
+
+sudo make install
+
+make check
+
+-------------------------------------------------
+//  make sure maya is installed before this step!
+-------------------------------------------------
+
+sudo ln -s /usr/local/libpng/lib/libpng15.so.15 /usr/autodesk/maya2025/lib/libpng15.so.15

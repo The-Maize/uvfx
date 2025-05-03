@@ -1,0 +1,185 @@
+============ pngtest pngtest.png ==============
+
+ Testing libpng version 1.5.15
+   with zlib   version 1.3
+
+libpng version 1.5.15 - March 28, 2013
+Copyright (c) 1998-2013 Glenn Randers-Pehrson
+Copyright (c) 1996-1997 Andreas Dilger
+Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.
+ library (10515): libpng version 1.5.15 - March 28, 2013
+
+ pngtest (10515): libpng version 1.5.15 - March 28, 2013
+
+ Testing ./pngtest.png:
+   Text compression[0]=-1
+
+ stereo mode = 1
+ vpAg = 100 x 100, units = 0
+
+   Text compression[0]=0
+
+ Image width = 91, height = 69
+
+ PASS (9782 zero samples)
+ Filter 0 was used 21 times
+ Filter 1 was used 15 times
+ Filter 2 was used 52 times
+ Filter 3 was used 10 times
+ Filter 4 was used 33 times
+ tIME = 7 Jun 1996 17:58:08 +0000
+
+ Testing ./pngtest.png:
+   Text compression[0]=-1
+
+ stereo mode = 1
+ vpAg = 100 x 100, units = 0
+
+ Pass 0: rwrwrwrwrwrwrwrwrw
+ Pass 1: rwrwrwrwrwrwrwrwrw
+ Pass 2: rwrwrwrwrwrwrwrw
+ Pass 3: rwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrw
+ Pass 4: rwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrw
+ Pass 5: rwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrw
+         rwrwrwrw
+ Pass 6: rwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrw
+         rwrwrwrwrw
+   Text compression[0]=0
+
+ Image width = 91, height = 69
+
+ PASS (9782 zero samples)
+ Filter 0 was used 21 times
+ Filter 1 was used 15 times
+ Filter 2 was used 52 times
+ Filter 3 was used 10 times
+ Filter 4 was used 33 times
+ tIME = 7 Jun 1996 17:58:08 +0000
+
+ Testing ./pngtest.png:
+   Text compression[0]=-1
+
+ stereo mode = 1
+ vpAg = 100 x 100, units = 0
+
+ Pass 0: rwrwrwrwrwrwrwrwrw
+ Pass 1: rwrwrwrwrwrwrwrwrw
+ Pass 2: rwrwrwrwrwrwrwrw
+ Pass 3: rwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrw
+ Pass 4: rwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrw
+ Pass 5: rwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrw
+         rwrwrwrw
+ Pass 6: rwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrwrw
+         rwrwrwrwrw
+   Text compression[0]=0
+
+ Image width = 91, height = 69
+
+ PASS (9782 zero samples)
+ Filter 0 was used 21 times
+ Filter 1 was used 15 times
+ Filter 2 was used 52 times
+ Filter 3 was used 10 times
+ Filter 4 was used 33 times
+ tIME = 7 Jun 1996 17:58:08 +0000
+ libpng passes test
+
+============ pngvalid-simple.sh ==============
+PASS: pngvalid --standard (floating point arithmetic)
+PASS: pngvalid --standard --progressive-read (floating point arithmetic)
+PASS: pngvalid --standard --interlace (floating point arithmetic)
+PASS: pngvalid --standard --progressive-read --interlace (floating point arithmetic)
+PASS: pngvalid --size (floating point arithmetic)
+PASS: pngvalid --size --progressive-read (floating point arithmetic)
+PASS: pngvalid --transform (floating point arithmetic)
+
+============ pngvalid-full.sh ==============
+PASS: pngvalid --gamma-threshold (floating point arithmetic)
+Gamma correction error summary
+
+The printed value is the maximum error in the pixel values
+calculated by the libpng gamma correction code.  The error
+is calculated as the difference between the output pixel
+value (always an integer) and the ideal value from the
+libpng specification (typically not an integer).
+
+Expect this value to be less than .5 for 8 bit formats,
+less than 1 for formats with fewer than 8 bits and a small
+number (typically less than 5) for the 16 bit formats.
+For performance reasons the value for 16 bit formats
+increases when the image file includes an sBIT chunk.
+
+  2 bit gray:  0.50495
+  4 bit gray:  0.81888
+  8 bit gray:  0.49933
+  8 bit color: 0.49933
+  indexed:     0.00000
+ 16 bit gray:  0.74080
+ 16 bit color: 0.74080
+PASS: pngvalid --gamma-transform (floating point arithmetic)
+Gamma correction with sBIT:
+ 16 bit gray:  0.74058
+ 16 bit color: 0.74058
+PASS: pngvalid --gamma-sbit (floating point arithmetic)
+Gamma correction with 16 to 8 bit reduction:
+ 16 bit gray:  1.97052
+ 16 bit color: 1.97052
+PASS: pngvalid --gamma-16-to-8 (floating point arithmetic)
+Gamma correction with background:
+  2 bit gray:  0.00000
+  4 bit gray:  0.00000
+  8 bit gray:  5.94334
+  8 bit color: 19.59153
+  indexed:     0.00000
+ 16 bit gray:  1.08750
+ 16 bit color: 84.02026
+PASS: pngvalid --gamma-background (floating point arithmetic)
+Gamma correction with alpha mode:
+  2 bit gray:  0.00000
+  4 bit gray:  0.00000
+  8 bit gray:  17.48251
+  8 bit color: 17.48251
+  indexed:     0.00000
+ 16 bit gray:  309.24044
+ 16 bit color: 310.97330
+PASS: pngvalid --gamma-alpha-mode (floating point arithmetic)
+Gamma correction error summary
+
+The printed value is the maximum error in the pixel values
+calculated by the libpng gamma correction code.  The error
+is calculated as the difference between the output pixel
+value (always an integer) and the ideal value from the
+libpng specification (typically not an integer).
+
+Expect this value to be less than .5 for 8 bit formats,
+less than 1 for formats with fewer than 8 bits and a small
+number (typically less than 5) for the 16 bit formats.
+For performance reasons the value for 16 bit formats
+increases when the image file includes an sBIT chunk.
+
+  2 bit gray:  127.07023
+  4 bit gray:  127.07023
+  8 bit gray:  128.32752
+  8 bit color: 128.32752
+  indexed:     128.32752
+ 16 bit gray:  0.74080
+ 16 bit color: 0.74080
+PASS: pngvalid --gamma-transform --expand16 (floating point arithmetic)
+Gamma correction with background:
+  2 bit gray:  0.00000
+  4 bit gray:  0.00000
+  8 bit gray:  4989.81713
+  8 bit color: 5082.36759
+  indexed:     0.00000
+ 16 bit gray:  1.05056
+ 16 bit color: 106.99649
+PASS: pngvalid --gamma-background --expand16 (floating point arithmetic)
+Gamma correction with alpha mode:
+  2 bit gray:  0.00000
+  4 bit gray:  0.00000
+  8 bit gray:  4493.00481
+  8 bit color: 4493.00481
+  indexed:     0.00000
+ 16 bit gray:  309.24044
+ 16 bit color: 310.97330
+PASS: pngvalid --gamma-alpha-mode --expand16 (floating point arithmetic)
